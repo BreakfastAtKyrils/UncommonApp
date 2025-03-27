@@ -18,23 +18,49 @@
             <a  href="google.com">Contact</a>
         </div>
     </header>
-    <div class="top-image">
+    <!-- <div class="top-image">
         <img src="images/photo-how-we-work.jpg">
-    </div>
-    <div class="call-out-section">
+    </div> -->
+    <!-- <div class="call-out-section">
         <div class="call-out">
             Secure more than just admission: <br> earn confidence and find where you belong.
         </div>
+    </div> -->
+    <div class="undergrad-services-section">
+        <div class="undergrad-title text-green font-40 padding-left-20">Undergraduate services</div>
+        <div class="service-descriptions">
+            <div class="icons">
+                <div > 
+                    <img src="images/loupe-icon.svg" alt="Uncommon Logo">
+                </div>
+                <div  >             
+                    <img src="images/essay-icon.svg" alt="Uncommon Logo">
+                </div>
+                <div class="selected-icon">                      
+                    <img src="images/target-icon.svg" alt="Uncommon Logo">
+                </div>
+            </div>
+            <div class="service-description current">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut temporibus beatae maiores possimus, eum eius sed doloremque quae nostrum veritatis, rerum molestiae eos. Corrupti sunt sed odio perspiciatis obcaecati. Mollitia.
+                <br>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat unde sint autem quasi quia officiis laudantium, at eum vero atque corporis rem rerum quidem quod aperiam nobis natus vitae itaque!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime obcaecati at animi, ullam eligendi architecto incidunt minus perspiciatis. Voluptates, provident odit? Fugit nam dolorum voluptatibus repudiandae, nemo eum officia voluptatem.
+            </div>
+            <div class="service-description hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut temporibus beatae maiores possimus, eum eius sed doloremque quae nostrum veritatis, rerum molestiae eos. Corrupti sunt sed odio perspiciatis obcaecati. Mollitia.
+                <br>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat unde sint autem quasi quia officiis laudantium, at eum vero atque corporis rem rerum quidem quod aperiam nobis natus vitae itaque!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime obcaecati at animi, ullam eligendi architecto incidunt minus perspiciatis. Voluptates, provident odit? Fugit nam dolorum voluptatibus repudiandae, nemo eum officia voluptatem.
+            </div>
+            <div class="service-description hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut temporibus beatae maiores possimus, eum eius sed doloremque quae nostrum veritatis, rerum molestiae eos. Corrupti sunt sed odio perspiciatis obcaecati. Mollitia.
+                <br>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat unde sint autem quasi quia officiis laudantium, at eum vero atque corporis rem rerum quidem quod aperiam nobis natus vitae itaque!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime obcaecati at animi, ullam eligendi architecto incidunt minus perspiciatis. Voluptates, provident odit? Fugit nam dolorum voluptatibus repudiandae, nemo eum officia voluptatem.
+            </div>
+        </div>
     </div>
-
-
-
-
-
-
-
-
-    <div class="grad-service bground-green"> 
+    <!-- <div class="grad-service bground-green"> 
         <div class="icon-section">
             <img src="images/sphere-icon.svg" alt="Uncommon Logo" class="filter-white">
         </div>
@@ -84,21 +110,227 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto adipisci expedita pariatur eos voluptatum omnis perferendis beatae minima necessitatibus! Quo libero nesciunt eos harum eveniet labore quae. Eligendi, sequi ipsum.
             </div>
         </div>
+    </div> -->
     </div>
-    <div class="undergrad-services-section">
-        <div class="undergrad-title text-green font-40 padding-left-20">Undergraduate services</div>
-        <div class="service-descriptions">
-            <div class="icons">
-                <div> Icon 1</div>
-                <div> Icon 2</div>
-                <div> Icon 3</div>
-            </div>
-            <div class="service-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut temporibus beatae maiores possimus, eum eius sed doloremque quae nostrum veritatis, rerum molestiae eos. Corrupti sunt sed odio perspiciatis obcaecati. Mollitia.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat unde sint autem quasi quia officiis laudantium, at eum vero atque corporis rem rerum quidem quod aperiam nobis natus vitae itaque!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime obcaecati at animi, ullam eligendi architecto incidunt minus perspiciatis. Voluptates, provident odit? Fugit nam dolorum voluptatibus repudiandae, nemo eum officia voluptatem.
-            </div>
-        </div>
-    </div>
+        <canvas id="viewportCanvas"></canvas>
+    <script>
+        function drawShape() {
+            var selectedIcon = document.querySelector('.selected-icon');
+            if (!selectedIcon) {
+                console.error('Element with class "selected-icon" not found');
+                return;
+            }
+
+            var parent = selectedIcon.parentElement;
+            var children = Array.from(parent.children);
+            var index = children.indexOf(selectedIcon);
+
+            if (index === 0) {
+                drawLeftShape();
+            } else if (index === children.length - 1) {
+                drawRightShape();
+            } else {
+                drawMiddleShape();
+            }
+        }
+    
+        function drawMiddleShape() {
+            var canvas = document.getElementById('viewportCanvas');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            if (!canvas) {
+                console.error('Canvas element not found');
+                return;
+            }
+
+            var ctx = canvas.getContext('2d');
+            if (!ctx) {
+                console.error('Canvas context not found');
+                return;
+            }
+
+            var top_element = document.querySelector('.selected-icon');
+            if (!top_element) {
+                console.error('Selected icon element not found');
+                return;
+            }
+
+            var topRect = top_element.getBoundingClientRect();
+            var topLeftX = topRect.x;
+            var topLeftY = topRect.y;
+            var topWidth = topRect.width;
+            var topHeight = topRect.height;
+
+            var bottom_element = document.querySelector('.service-description.current')
+            if (!bottom_element) {
+                console.error('Selected icon element not found');
+                return;
+            }
+
+            var bottomRect = bottom_element.getBoundingClientRect();
+            var bottomLeftX = bottomRect.x;
+            var bottomLeftY = bottomRect.y;
+            var bottomWidth = bottomRect.width;
+            var bottomHeight = bottomRect.height;
+            var radius = 20;
+
+            ctx.strokeStyle = '#263F3C';
+            ctx.lineWidth = 2;
+
+            ctx.beginPath();
+            ctx.moveTo(topLeftX + radius, topLeftY);
+            ctx.lineTo(topLeftX + topWidth - radius, topLeftY);
+            ctx.arcTo(topLeftX + topWidth, topLeftY, topLeftX + topWidth, topLeftY + radius, radius);
+            ctx.lineTo(topLeftX + topWidth, topLeftY + topHeight - radius);
+            ctx.arcTo(topLeftX + topWidth, topLeftY + topHeight, topLeftX + topWidth + radius, topLeftY + topHeight, radius);
+            ctx.lineTo(topLeftX + topWidth + topWidth - radius, topLeftY + topHeight);
+            ctx.arcTo(topLeftX + topWidth + topWidth, topLeftY + topHeight, topLeftX + topWidth + topWidth, topLeftY + topHeight + radius, radius)
+            ctx.lineTo(topLeftX + topWidth + topWidth, topLeftY + topHeight + bottomHeight - radius);
+            ctx.arcTo(topLeftX + topWidth + topWidth, topLeftY + topHeight + bottomHeight, topLeftX + topWidth + topWidth - radius, topLeftY + topHeight + bottomHeight, radius)
+            ctx.lineTo(bottomLeftX + radius, bottomLeftY + bottomHeight)
+            ctx.arcTo(bottomLeftX, bottomLeftY + bottomHeight, bottomLeftX, bottomLeftY + bottomHeight - radius, radius)
+            ctx.lineTo(bottomLeftX, bottomLeftY + radius)
+            ctx.arcTo(bottomLeftX, bottomLeftY, bottomLeftX + radius, bottomLeftY, radius)
+            ctx.lineTo(topLeftX - radius, bottomLeftY)
+            ctx.arcTo(topLeftX, bottomLeftY, topLeftX, bottomLeftY - radius, radius)
+            ctx.lineTo(topLeftX, topLeftY + radius)
+            ctx.arcTo(topLeftX, topLeftY, topLeftX + radius, topLeftY,  radius)
+            ctx.stroke();
+        }
+
+        function drawLeftShape() {
+            var canvas = document.getElementById('viewportCanvas');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            if (!canvas) {
+                console.error('Canvas element not found');
+                return;
+            }
+
+            var ctx = canvas.getContext('2d');
+            if (!ctx) {
+                console.error('Canvas context not found');
+                return;
+            }
+
+            var top_element = document.querySelector('.selected-icon');
+            if (!top_element) {
+                console.error('Selected icon element not found');
+                return;
+            }
+
+            var topRect = top_element.getBoundingClientRect();
+            var topLeftX = topRect.x;
+            var topLeftY = topRect.y;
+            var topWidth = topRect.width;
+            var topHeight = topRect.height;
+
+            var bottom_element = document.querySelector('.service-description.current')
+            if (!bottom_element) {
+                console.error('Selected icon element not found');
+                return;
+            }
+
+            var bottomRect = bottom_element.getBoundingClientRect();
+            var bottomLeftX = bottomRect.x;
+            var bottomLeftY = bottomRect.y;
+            var bottomWidth = bottomRect.width;
+            var bottomHeight = bottomRect.height;
+            var radius = 20;
+
+            ctx.strokeStyle = '#263F3C';
+            ctx.lineWidth = 2;
+
+            ctx.beginPath();
+            ctx.moveTo(topLeftX + radius -2 , topLeftY);
+            ctx.lineTo(topLeftX + topWidth - radius, topLeftY);
+            ctx.arcTo(topLeftX + topWidth, topLeftY, topLeftX + topWidth, topLeftY + radius, radius);
+            ctx.lineTo(topLeftX + topWidth, topLeftY + topHeight - radius);
+            ctx.arcTo(topLeftX + topWidth, topLeftY + topHeight, topLeftX + topWidth + radius, topLeftY + topHeight, radius);
+            ctx.lineTo(topLeftX + topWidth + topWidth + topWidth - radius, topLeftY + topHeight);
+            ctx.arcTo(topLeftX + topWidth + topWidth + topWidth, topLeftY + topHeight, topLeftX + topWidth + topWidth + topWidth, topLeftY + topHeight + radius, radius)
+            ctx.lineTo(topLeftX + topWidth + topWidth + topWidth, topLeftY + topHeight + bottomHeight - radius);
+            ctx.arcTo(topLeftX + topWidth + topWidth + topWidth, topLeftY + topHeight + bottomHeight, topLeftX + topWidth + topWidth - radius, topLeftY + topHeight + bottomHeight, radius)
+            ctx.lineTo(bottomLeftX + radius, bottomLeftY + bottomHeight)
+            ctx.arcTo(bottomLeftX, bottomLeftY + bottomHeight, bottomLeftX, bottomLeftY + bottomHeight - radius, radius)
+            ctx.lineTo(bottomLeftX, topLeftY + radius)
+            ctx.arcTo(topLeftX, topLeftY, topLeftX + radius, topLeftY, radius)
+            ctx.stroke();
+        }
+        
+        function drawRightShape() {
+            var canvas = document.getElementById('viewportCanvas');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            if (!canvas) {
+                console.error('Canvas element not found');
+                return;
+            }
+
+            var ctx = canvas.getContext('2d');
+            if (!ctx) {
+                console.error('Canvas context not found');
+                return;
+            }
+
+            var top_element = document.querySelector('.selected-icon');
+            if (!top_element) {
+                console.error('Selected icon element not found');
+                return;
+            }
+
+            var topRect = top_element.getBoundingClientRect();
+            var topLeftX = topRect.x;
+            var topLeftY = topRect.y;
+            var topWidth = topRect.width;
+            var topHeight = topRect.height;
+
+            var bottom_element = document.querySelector('.service-description.current')
+            if (!bottom_element) {
+                console.error('Selected icon element not found');
+                return;
+            }
+
+            var bottomRect = bottom_element.getBoundingClientRect();
+            var bottomLeftX = bottomRect.x;
+            var bottomLeftY = bottomRect.y;
+            var bottomWidth = bottomRect.width;
+            var bottomHeight = bottomRect.height;
+            var radius = 20;
+
+            ctx.strokeStyle = '#263F3C';
+            ctx.lineWidth = 2;
+
+            ctx.beginPath();
+            ctx.moveTo(topLeftX + radius - 6, topLeftY);
+            ctx.lineTo(topLeftX + topWidth - radius, topLeftY);
+            ctx.arcTo(topLeftX + topWidth, topLeftY, topLeftX + topWidth, topLeftY + radius, radius);
+            ctx.lineTo(topLeftX + topWidth, topLeftY + topHeight + bottomHeight - radius);
+            ctx.arcTo(topLeftX + topWidth, topLeftY + topHeight + bottomHeight, topLeftX + topWidth - radius, topLeftY + topHeight + bottomHeight, radius);
+            ctx.lineTo(bottomLeftX + radius, topLeftY + topHeight + bottomHeight);
+            ctx.arcTo( bottomLeftX, topLeftY + topHeight + bottomHeight, bottomLeftX, topLeftY + topHeight + bottomHeight - radius, radius)
+            ctx.lineTo(bottomLeftX, bottomLeftY + radius);
+            ctx.arcTo(bottomLeftX, bottomLeftY, bottomLeftX + radius, bottomLeftY, radius)
+            ctx.lineTo(bottomLeftX + topWidth + topWidth - radius, bottomLeftY)
+            ctx.arcTo(bottomLeftX + topWidth + topWidth, bottomLeftY, bottomLeftX + topWidth + topWidth, bottomLeftX - radius, radius)
+            ctx.lineTo(bottomLeftX + topWidth + topWidth, topLeftY + radius)
+            ctx.arcTo(topLeftX, topLeftY, topLeftX + radius, topLeftY, radius)
+            ctx.stroke();
+        }
+        
+        
+        
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('resize', drawShape);
+            drawShape(); // Call the function initially to draw the shape on page load
+
+            var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                drawShape(); // Redraw the shape whenever the DOM changes
+            });
+    });
+        });
+    </script>
+
 </body>
