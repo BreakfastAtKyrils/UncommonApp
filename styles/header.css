@@ -110,9 +110,11 @@ body {
     align-items: center;
     justify-content: center;
 }
+.icon-section img {
+    padding: 15px;
+}
 .description-section {
     width: 75%;
-    
     padding-top: 20px;
 }
 .padding-right-20 {
@@ -123,7 +125,7 @@ body {
 }
 
 .icon-section img {
-    height: 240px;
+    aspect-ratio: 16/12;
 }
 .bground-green {
     background-color: #263F3C;
@@ -148,13 +150,13 @@ body {
     color: #263F3C;
 }
 .filter-white {
-    filter: invert(100%) brightness(0%);
+    filter: invert(100%) brightness(100%);
 }
 .filter-green {
     filter: 
     invert(32%) 
     sepia(29%) 
-    saturate(551%) 
+    saturate(51%) 
     hue-rotate(134deg) 
     brightness(89%) 
     contrast(99%); 
