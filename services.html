@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="styles/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -5,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body class="services-body">
-    <header>
+    <!-- <header>
         <div class="uncommon-logo">
             <img src="images/uncommon-logo.svg" alt="Uncommon Logo">
         </div>
@@ -18,16 +19,20 @@
             <a  href="google.com">Contact</a>
         </div>
     </header>
-    <!-- <div class="top-image">
+    <div class="top-image">
         <img src="images/photo-how-we-work.jpg">
-    </div> -->
-    <!-- <div class="call-out-section">
+    </div>
+    <div class="call-out-section">
         <div class="call-out">
             Secure more than just admission: <br> earn confidence and find where you belong.
         </div>
     </div> -->
     <div class="undergrad-services-section">
+        
+
         <div class="undergrad-title text-green font-40 padding-left-20">Undergraduate services</div>
+
+
         <div class="service-descriptions">
             <div class="icons">
                 <div class="selected-icon"> 
@@ -39,6 +44,7 @@
                 <div >                      
                     <img src="images/target-icon.svg" alt="Uncommon Logo">
                 </div>
+
             </div>
             <div class="service-description current">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut temporibus beatae maiores possimus, eum eius sed doloremque quae nostrum veritatis, rerum molestiae eos. Corrupti sunt sed odio perspiciatis obcaecati. Mollitia.
@@ -58,7 +64,10 @@
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat unde sint autem quasi quia officiis laudantium, at eum vero atque corporis rem rerum quidem quod aperiam nobis natus vitae itaque!
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime obcaecati at animi, ullam eligendi architecto incidunt minus perspiciatis. Voluptates, provident odit? Fugit nam dolorum voluptatibus repudiandae, nemo eum officia voluptatem.
             </div>
+            
         </div>
+
+        
     </div>
     <!-- <div class="grad-service bground-green"> 
         <div class="icon-section">
@@ -72,8 +81,6 @@
                 <br>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, corporis dolorum reiciendis accusantium, ab laboriosam placeat facere totam quisquam optio doloremque aliquam, voluptate voluptas perferendis. Impedit minima voluptates nobis ut.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis fugit mollitia possimus iusto dolorum error ad consequatur quidem quia facere ab, blanditiis quis excepturi doloribus magni ea tempora deserunt sunt.
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto adipisci expedita pariatur eos voluptatum omnis perferendis beatae minima necessitatibus! Quo libero nesciunt eos harum eveniet labore quae. Eligendi, sequi ipsum.
             </div>
         </div>
     </div>
@@ -86,8 +93,6 @@
                 <br>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, corporis dolorum reiciendis accusantium, ab laboriosam placeat facere totam quisquam optio doloremque aliquam, voluptate voluptas perferendis. Impedit minima voluptates nobis ut.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis fugit mollitia possimus iusto dolorum error ad consequatur quidem quia facere ab, blanditiis quis excepturi doloribus magni ea tempora deserunt sunt.
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto adipisci expedita pariatur eos voluptatum omnis perferendis beatae minima necessitatibus! Quo libero nesciunt eos harum eveniet labore quae. Eligendi, sequi ipsum.
             </div>
         </div>
         <div class="icon-section">
@@ -106,8 +111,7 @@
                 <br>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, corporis dolorum reiciendis accusantium, ab laboriosam placeat facere totam quisquam optio doloremque aliquam, voluptate voluptas perferendis. Impedit minima voluptates nobis ut.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis fugit mollitia possimus iusto dolorum error ad consequatur quidem quia facere ab, blanditiis quis excepturi doloribus magni ea tempora deserunt sunt.
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto adipisci expedita pariatur eos voluptatum omnis perferendis beatae minima necessitatibus! Quo libero nesciunt eos harum eveniet labore quae. Eligendi, sequi ipsum.
+
             </div>
         </div>
     </div> -->
@@ -116,22 +120,25 @@
     <script>
         function drawShape() {
             var selectedIcon = document.querySelector('.selected-icon');
+            
             if (!selectedIcon) {
                 console.error('Element with class "selected-icon" not found');
                 return;
             }
 
-            var parent = selectedIcon.parentElement;
-            var children = Array.from(parent.children);
-            var index = children.indexOf(selectedIcon);
+            drawLeftShape();
+            // var parent = selectedIcon.parentElement; 
+            // var parent = document.querySelector('.icons');
+            // var children = Array.from(parent.children);
+            // var index = children.indexOf(selectedIcon);
 
-            if (index === 0) {
-                drawLeftShape();
-            } else if (index === children.length - 1) {
-                drawRightShape();
-            } else {
-                drawMiddleShape();
-            }
+            // if (index === 0) {
+            //     drawLeftShape();
+            // } else if (index === children.length - 1) {
+            //     drawRightShape();
+            // } else {
+            //     drawMiddleShape();
+            // }
         }
     
         function drawMiddleShape() {
@@ -214,6 +221,9 @@
             }
 
             var top_element = document.querySelector('.selected-icon');
+            if (top_element) {
+                top_element.style.border = '2px solid red';
+            }
             if (!top_element) {
                 console.error('Selected icon element not found');
                 return;
@@ -226,6 +236,9 @@
             var topHeight = topRect.height;
 
             var bottom_element = document.querySelector('.service-description.current')
+            if (bottom_element) {
+                bottom_element.style.border = '2px solid red';
+            }
             if (!bottom_element) {
                 console.error('Selected icon element not found');
                 return;
@@ -273,6 +286,9 @@
             }
 
             var top_element = document.querySelector('.selected-icon');
+            if (top_element) {
+                top_element.style.border = '2px solid red';
+            }
             if (!top_element) {
                 console.error('Selected icon element not found');
                 return;
@@ -285,6 +301,9 @@
             var topHeight = topRect.height;
 
             var bottom_element = document.querySelector('.service-description.current')
+            if (bottom_element) {
+                bottom_element.style.border = '2px solid red';
+            }
             if (!bottom_element) {
                 console.error('Selected icon element not found');
                 return;
