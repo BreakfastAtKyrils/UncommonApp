@@ -30,13 +30,13 @@
         <div class="undergrad-title text-green font-40 padding-left-20">Undergraduate services</div>
         <div class="service-descriptions">
             <div class="icons">
-                <div > 
+                <div class="selected-icon"> 
                     <img src="images/loupe-icon.svg" alt="Uncommon Logo">
                 </div>
                 <div  >             
                     <img src="images/essay-icon.svg" alt="Uncommon Logo">
                 </div>
-                <div class="selected-icon">                      
+                <div >                      
                     <img src="images/target-icon.svg" alt="Uncommon Logo">
                 </div>
             </div>
@@ -172,7 +172,7 @@
             var bottomLeftY = bottomRect.y;
             var bottomWidth = bottomRect.width;
             var bottomHeight = bottomRect.height;
-            var radius = 20;
+            var radius = 25;
 
             ctx.strokeStyle = '#263F3C';
             ctx.lineWidth = 2;
@@ -236,13 +236,12 @@
             var bottomLeftY = bottomRect.y;
             var bottomWidth = bottomRect.width;
             var bottomHeight = bottomRect.height;
-            var radius = 20;
+            var radius = 25;
 
             ctx.strokeStyle = '#263F3C';
             ctx.lineWidth = 2;
-
-            ctx.beginPath();
-            ctx.moveTo(topLeftX + radius -2 , topLeftY);
+            
+            ctx.moveTo(bottomLeftX + radius, topLeftY);
             ctx.lineTo(topLeftX + topWidth - radius, topLeftY);
             ctx.arcTo(topLeftX + topWidth, topLeftY, topLeftX + topWidth, topLeftY + radius, radius);
             ctx.lineTo(topLeftX + topWidth, topLeftY + topHeight - radius);
@@ -296,25 +295,25 @@
             var bottomLeftY = bottomRect.y;
             var bottomWidth = bottomRect.width;
             var bottomHeight = bottomRect.height;
-            var radius = 20;
+            var radius = 25;
 
             ctx.strokeStyle = '#263F3C';
             ctx.lineWidth = 2;
 
             ctx.beginPath();
-            ctx.moveTo(topLeftX + radius - 6, topLeftY);
+            ctx.moveTo(topLeftX + radius, topLeftY);
             ctx.lineTo(topLeftX + topWidth - radius, topLeftY);
             ctx.arcTo(topLeftX + topWidth, topLeftY, topLeftX + topWidth, topLeftY + radius, radius);
             ctx.lineTo(topLeftX + topWidth, topLeftY + topHeight + bottomHeight - radius);
             ctx.arcTo(topLeftX + topWidth, topLeftY + topHeight + bottomHeight, topLeftX + topWidth - radius, topLeftY + topHeight + bottomHeight, radius);
             ctx.lineTo(bottomLeftX + radius, topLeftY + topHeight + bottomHeight);
-            ctx.arcTo( bottomLeftX, topLeftY + topHeight + bottomHeight, bottomLeftX, topLeftY + topHeight + bottomHeight - radius, radius)
+            ctx.arcTo(bottomLeftX, topLeftY + topHeight + bottomHeight, bottomLeftX, topLeftY + topHeight + bottomHeight - radius, radius);
             ctx.lineTo(bottomLeftX, bottomLeftY + radius);
-            ctx.arcTo(bottomLeftX, bottomLeftY, bottomLeftX + radius, bottomLeftY, radius)
+            ctx.arcTo(bottomLeftX, topLeftY + topHeight, bottomLeftX + radius, topLeftY + topHeight, radius);
             ctx.lineTo(bottomLeftX + topWidth + topWidth - radius, bottomLeftY)
-            ctx.arcTo(bottomLeftX + topWidth + topWidth, bottomLeftY, bottomLeftX + topWidth + topWidth, bottomLeftX - radius, radius)
-            ctx.lineTo(bottomLeftX + topWidth + topWidth, topLeftY + radius)
-            ctx.arcTo(topLeftX, topLeftY, topLeftX + radius, topLeftY, radius)
+            ctx.arcTo(topLeftX, bottomLeftY, topLeftX, bottomLeftY - radius, radius)
+            ctx.lineTo(topLeftX, topLeftY + radius);
+            ctx.arcTo(topLeftX, topLeftY, topLeftX + radius, topLeftY, radius);
             ctx.stroke();
         }
         
