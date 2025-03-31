@@ -324,3 +324,24 @@ body {
 .padding-top-20 {
     padding-top: 20px;
 }
+.home-text-section {
+    width: 40%;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-right: 20px;
+}
+.margin-top-40 {
+    margin-top: 40px;
+}
+.home-section {
+    display: flex;
+}
+.home-image-section {
+    height: 450px;
+    display: flex;
+    align-items: center;
+}
+.home-image-section img {
+    height: 110%;
+}
