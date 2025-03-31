@@ -312,3 +312,15 @@ body {
     height: 100%;
     pointer-events: none; /* Make sure the canvas doesn't block other elements */
 }
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+}
+.contact-section div {
+    width: 50%;
+    padding-top: 30px;
+}
+.padding-top-20 {
+    padding-top: 20px;
+}
