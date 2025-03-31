@@ -11,12 +11,12 @@
             <img src="images/uncommon-logo.svg" alt="Uncommon Logo">
         </div>
         <div class="nav-bar">
-            <a href="google.com">Home</a>
+            <a  href="file:///Users/kyril.remillard/Cleo%20/Elena%20Polenova%20Website/home.html">Home</a>
             <a href="google.com">How we work</a>    
             <a href="google.com">Results</a>
-            <a  href="google.com">Services</a>
+            <a  href="file:///Users/kyril.remillard/Cleo%20/Elena%20Polenova%20Website/services.html">Services</a>
             <a href="google.com">About us</a>
-            <a  class="current-page" href="google.com">Contact</a>
+            <a  class="current-page" href="file:///Users/kyril.remillard/Cleo%20/Elena%20Polenova%20Website/contact.html">Contact</a>
         </div>
     </header>
     <div class="contact-section bground-light-green">
@@ -35,4 +35,25 @@
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfvk4iBEwCdHLByABAYFg0tF5wlWUVONSxn0jkoMziMCQW1Ug/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
     </div>
+    
 </body>
+<script>
+    // Function to handle navigation
+    function navigateToPage(event) {
+const target = event.target;
+if (target.tagName.toLowerCase() === 'a') {
+    const url = target.getAttribute('data-url');
+    if (url) {
+        window.location.href = url;
+    }
+}
+}
+
+// Add event listeners to all the navigation links
+document.addEventListener('DOMContentLoaded', () => {
+const navLinks = document.querySelectorAll('.nav-bar a');
+navLinks.forEach(link => {
+    link.addEventListener('click', navigateToPage);
+});
+});
+</script>
