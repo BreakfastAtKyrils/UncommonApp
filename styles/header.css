@@ -345,3 +345,14 @@ body {
 .home-image-section img {
     height: 110%;
 }
+.service-read-more {
+    justify-self: end;
+    text-decoration: underline;
+}
+.padding-right-40 {
+    padding-right: 40px;
+}
+
+.padding-bottom-20 {
+    padding-bottom: 20px;
+}

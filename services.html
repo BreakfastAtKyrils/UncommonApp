@@ -69,7 +69,7 @@
 
         
     </div>
-    <!-- <div class="grad-service bground-green"> 
+    <div class="grad-service bground-green"> 
         <div class="icon-section">
             <img src="images/sphere-icon.svg" alt="Uncommon Logo" class="filter-white">
         </div>
@@ -82,6 +82,16 @@
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, corporis dolorum reiciendis accusantium, ab laboriosam placeat facere totam quisquam optio doloremque aliquam, voluptate voluptas perferendis. Impedit minima voluptates nobis ut.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis fugit mollitia possimus iusto dolorum error ad consequatur quidem quia facere ab, blanditiis quis excepturi doloribus magni ea tempora deserunt sunt.
             </div>
+            <div class="service-description text-white font-20 hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam saepe, beatae quibusdam repellat et quis. Officia distinctio vel repudiandae inventore possimus temporibus dolor sit est, sint non. Soluta, quibusdam dignissimos.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam debitis corrupti delectus voluptatum alias unde minus harum incidunt atque, fugiat necessitatibus quia perspiciatis cumque amet tenetur blanditiis placeat officia quae!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt laborum rerum exercitationem excepturi voluptas quod quaerat pariatur fugit vero. Doloribus nesciunt necessitatibus a porro fugit officiis, minima quasi sit! Nemo?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, praesentium. Asperiores blanditiis commodi quisquam aut qui sed veniam libero saepe quis beatae natus tenetur laudantium nostrum, numquam tempora vero facilis!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis quibusdam tenetur nemo in cum corporis consequuntur, sit debitis eos quisquam et eius sunt ad, cupiditate id fugit amet quidem dolores.
+            </div>
+            <div class="service-read-more text-white font-20 padding-right-40 padding-bottom-20">
+                Read more
+            </div>
         </div>
     </div>
     <div class="grad-service bground-white"> 
@@ -93,6 +103,16 @@
                 <br>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, corporis dolorum reiciendis accusantium, ab laboriosam placeat facere totam quisquam optio doloremque aliquam, voluptate voluptas perferendis. Impedit minima voluptates nobis ut.
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis fugit mollitia possimus iusto dolorum error ad consequatur quidem quia facere ab, blanditiis quis excepturi doloribus magni ea tempora deserunt sunt.
+            </div>
+            <div class="service-description text-green font-20 hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam saepe, beatae quibusdam repellat et quis. Officia distinctio vel repudiandae inventore possimus temporibus dolor sit est, sint non. Soluta, quibusdam dignissimos.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam debitis corrupti delectus voluptatum alias unde minus harum incidunt atque, fugiat necessitatibus quia perspiciatis cumque amet tenetur blanditiis placeat officia quae!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt laborum rerum exercitationem excepturi voluptas quod quaerat pariatur fugit vero. Doloribus nesciunt necessitatibus a porro fugit officiis, minima quasi sit! Nemo?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, praesentium. Asperiores blanditiis commodi quisquam aut qui sed veniam libero saepe quis beatae natus tenetur laudantium nostrum, numquam tempora vero facilis!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis quibusdam tenetur nemo in cum corporis consequuntur, sit debitis eos quisquam et eius sunt ad, cupiditate id fugit amet quidem dolores.
+            </div>
+            <div class="service-read-more text-green font-20 padding-right-40 padding-bottom-20">
+                Read more
             </div>
         </div>
         <div class="icon-section">
@@ -113,8 +133,16 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis fugit mollitia possimus iusto dolorum error ad consequatur quidem quia facere ab, blanditiis quis excepturi doloribus magni ea tempora deserunt sunt.
 
             </div>
+            <div class="service-description text-white font-20 hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam saepe, beatae quibusdam repellat et quis. Officia distinctio vel repudiandae inventore possimus temporibus dolor sit est, sint non. Soluta, quibusdam dignissimos.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam debitis corrupti delectus voluptatum alias unde minus harum incidunt atque, fugiat necessitatibus quia perspiciatis cumque amet tenetur blanditiis placeat officia quae!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt laborum rerum exercitationem excepturi voluptas quod quaerat pariatur fugit vero. Doloribus nesciunt necessitatibus a porro fugit officiis, minima quasi sit! Nemo?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, praesentium. Asperiores blanditiis commodi quisquam aut qui sed veniam libero saepe quis beatae natus tenetur laudantium nostrum, numquam tempora vero facilis!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis quibusdam tenetur nemo in cum corporis consequuntur, sit debitis eos quisquam et eius sunt ad, cupiditate id fugit amet quidem dolores.
+            </div>
+            <div class="service-read-more text-white font-20 padding-right-40 padding-bottom-20">Read more</div>
         </div>
-    </div> -->
+    </div>
     </div>
         <canvas id="viewportCanvas"></canvas>
     <script>
@@ -209,6 +237,10 @@
             var canvas = document.getElementById('viewportCanvas');
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
+
+            // var scrollX = window.scrollX;
+            // var scrollY = window.scrollY;
+
             if (!canvas) {
                 console.error('Canvas element not found');
                 return;
@@ -253,6 +285,11 @@
 
             ctx.strokeStyle = '#263F3C';
             ctx.lineWidth = 2;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+           
             
             ctx.moveTo(bottomLeftX + radius, topLeftY);
             ctx.lineTo(topLeftX + topWidth - radius, topLeftY);
@@ -339,16 +376,67 @@
         
         
         
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function() {  
             window.addEventListener('resize', drawShape);
             drawShape(); // Call the function initially to draw the shape on page load
 
             var observer = new MutationObserver(function(mutations) {
-            mutations.forEach(function(mutation) {
-                drawShape(); // Redraw the shape whenever the DOM changes
+                mutations.forEach(function(mutation) {
+                    drawShape(); // Redraw the shape whenever the DOM changes
+                });
             });
-    });
         });
+
+        drawShape();
+
+        // Read more functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            // Function to set up event listeners
+            function setupReadMoreListeners() {
+                // Get all elements with the class 'service-read-more'
+                const readMoreButtons = document.querySelectorAll('.service-read-more');
+
+                // Iterate over the NodeList of elements
+                readMoreButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        if (button.textContent.trim() == 'Read more') {
+                            // Change the button text
+                            button.textContent = 'Read less';
+
+                            // Find the previous sibling element
+                            const previousElement = button.previousElementSibling;
+
+                            if (previousElement) {
+                                // Remove .hidden class
+                                previousElement.classList.remove('hidden');
+                            }
+
+                        const gradServiceParent = button.closest('.grad-service');
+                        if (gradServiceParent) {
+                            // Set height to auto
+                            gradServiceParent.style.height = 'auto';
+                        }
+                        } else if (button.textContent.trim() == 'Read less') {
+                            // alert("read less")
+                            button.textContent = 'Read more';
+                            const previousElement = button.previousElementSibling;
+
+                            if (previousElement) {
+                                previousElement.classList.add('hidden');
+                            }
+
+                            const gradServiceParent = button.closest('.grad-service');
+                            if (gradServiceParent) {
+                                gradServiceParent.style.height = '';
+                            }
+                        }
+                    });
+                });
+            }
+
+            // Call the setup function
+            setupReadMoreListeners();
+});
     </script>
 
 </body>
