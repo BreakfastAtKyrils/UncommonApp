@@ -184,6 +184,10 @@ body {
     /* border-width: 1px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .icons img {
     height: 200px;
@@ -355,4 +359,7 @@ body {
 
 .padding-bottom-20 {
     padding-bottom: 20px;
+}
+.margin-top-20 {
+    margin-top: 20px;
 }

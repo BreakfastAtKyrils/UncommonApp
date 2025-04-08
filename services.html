@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body class="services-body">
-    <header>
+     <header>
         <div class="uncommon-logo">
             <img src="images/uncommon-logo.svg" alt="Uncommon Logo">
         </div>
@@ -19,14 +19,15 @@
             <a   href="file:///Users/kyril.remillard/Cleo%20/Elena%20Polenova%20Website/contact.html">Contact</a>
         </div>
     </header>
-    <div class="top-image">
-        <img src="images/photo-how-we-work.jpg">
+     <div class="top-image">        
+        <img src="images/photo-how-we-work.jpg" class="" width="500" height="300" id="service-top-image">
+
     </div>
     <div class="call-out-section">
         <div class="call-out">
             Secure more than just admission: <br> earn confidence and find where you belong.
         </div>
-    </div>
+    </div> 
     <div class="undergrad-services-section">
         
 
@@ -35,10 +36,10 @@
 
         <div class="service-descriptions">
             <div class="icons">
-                <div class="selected-icon"> 
+                <div > 
                     <img src="images/loupe-icon.svg" alt="Uncommon Logo">
                 </div>
-                <div  >             
+                <div  class="selected-icon">             
                     <img src="images/essay-icon.svg" alt="Uncommon Logo">
                 </div>
                 <div >                      
@@ -46,19 +47,28 @@
                 </div>
 
             </div>
+            <div class="service-description hidden padding-left-20 padding-right-20">
+                <div class="icon-name text-green font-40 padding-bottom-20"><strong>Essay Rescue</strong> </div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut temporibus beatae maiores possimus, eum eius sed doloremque quae nostrum veritatis, rerum molestiae eos. Corrupti sunt sed odio perspiciatis obcaecati. Mollitia.
+                <br>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat unde sint autem quasi quia officiis laudantium, at eum vero atque corporis rem rerum quidem quod aperiam nobis natus vitae itaque!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime obcaecati at animi, ullam eligendi architecto incidunt minus perspiciatis. Voluptates, provident odit? Fugit nam dolorum voluptatibus repudiandae, nemo eum officia voluptatem.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat unde sint autem quasi quia officiis laudantium, at eum vero atque corporis rem rerum quidem quod aperiam nobis natus vitae itaque!
+
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat unde sint autem quasi quia officiis laudantium, at eum vero atque corporis rem rerum quidem quod aperiam nobis natus vitae itaque!
+
+            </div>
             <div class="service-description current">
+                <div class="icon-name text-green font-40 padding-bottom-20 margin-top-20"><strong>Consultation Assessment</strong> </div>
+
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut temporibus beatae maiores possimus, eum eius sed doloremque quae nostrum veritatis, rerum molestiae eos. Corrupti sunt sed odio perspiciatis obcaecati. Mollitia.
                 <br>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat unde sint autem quasi quia officiis laudantium, at eum vero atque corporis rem rerum quidem quod aperiam nobis natus vitae itaque!
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime obcaecati at animi, ullam eligendi architecto incidunt minus perspiciatis. Voluptates, provident odit? Fugit nam dolorum voluptatibus repudiandae, nemo eum officia voluptatem.
             </div>
             <div class="service-description hidden">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut temporibus beatae maiores possimus, eum eius sed doloremque quae nostrum veritatis, rerum molestiae eos. Corrupti sunt sed odio perspiciatis obcaecati. Mollitia.
-                <br>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat unde sint autem quasi quia officiis laudantium, at eum vero atque corporis rem rerum quidem quod aperiam nobis natus vitae itaque!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime obcaecati at animi, ullam eligendi architecto incidunt minus perspiciatis. Voluptates, provident odit? Fugit nam dolorum voluptatibus repudiandae, nemo eum officia voluptatem.
-            </div>
-            <div class="service-description hidden">
+                <div class="icon-name text-green font-40 padding-bottom-20"><strong>Comprehensive Plan</strong> </div>
+
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut temporibus beatae maiores possimus, eum eius sed doloremque quae nostrum veritatis, rerum molestiae eos. Corrupti sunt sed odio perspiciatis obcaecati. Mollitia.
                 <br>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat unde sint autem quasi quia officiis laudantium, at eum vero atque corporis rem rerum quidem quod aperiam nobis natus vitae itaque!
@@ -69,7 +79,7 @@
 
         
     </div>
-    <div class="grad-service bground-green"> 
+    <div class="grad-service bground-green margin-top-20"> 
         <div class="icon-section">
             <img src="images/sphere-icon.svg" alt="Uncommon Logo" class="filter-white">
         </div>
@@ -154,19 +164,19 @@
                 return;
             }
 
-            drawLeftShape();
-            // var parent = selectedIcon.parentElement; 
-            // var parent = document.querySelector('.icons');
-            // var children = Array.from(parent.children);
-            // var index = children.indexOf(selectedIcon);
+            // drawLeftShape();
+            var parent = selectedIcon.parentElement; 
+            var parent = document.querySelector('.icons');
+            var children = Array.from(parent.children);
+            var index = children.indexOf(selectedIcon);
 
-            // if (index === 0) {
-            //     drawLeftShape();
-            // } else if (index === children.length - 1) {
-            //     drawRightShape();
-            // } else {
-            //     drawMiddleShape();
-            // }
+            if (index === 0) {
+                drawLeftShape();
+            } else if (index === children.length - 1) {
+                drawRightShape();
+            } else {
+                drawMiddleShape();
+            }
         }
     
         function drawMiddleShape() {
@@ -234,6 +244,9 @@
         }
 
         function drawLeftShape() {
+            // var image = document.getElementById('service-top-image')
+            // image.style.height = '500px';
+            
             var canvas = document.getElementById('viewportCanvas');
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
@@ -254,7 +267,7 @@
 
             var top_element = document.querySelector('.selected-icon');
             if (top_element) {
-                top_element.style.border = '2px solid red';
+                // top_element.style.border = '2px solid red';
             }
             if (!top_element) {
                 console.error('Selected icon element not found');
@@ -269,7 +282,7 @@
 
             var bottom_element = document.querySelector('.service-description.current')
             if (bottom_element) {
-                bottom_element.style.border = '2px solid red';
+                // bottom_element.style.border = '2px solid red';
             }
             if (!bottom_element) {
                 console.error('Selected icon element not found');
@@ -290,7 +303,7 @@
             ctx.setTransform(1, 0, 0, 1, 0, 0);
 
            
-            
+            // ctx.translate(0, 180);
             ctx.moveTo(bottomLeftX + radius, topLeftY);
             ctx.lineTo(topLeftX + topWidth - radius, topLeftY);
             ctx.arcTo(topLeftX + topWidth, topLeftY, topLeftX + topWidth, topLeftY + radius, radius);
