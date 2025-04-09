@@ -330,11 +330,11 @@ body {
     padding-top: 20px;
 }
 .home-text-section {
-    width: 40%;
+    /* width: 40%; */
     padding-left: 40px;
     padding-top: 20px;
     padding-bottom: 40px;
-    padding-right: 20px;
+    padding-right: 40px;
 }
 .margin-top-40 {
     margin-top: 40px;
@@ -363,4 +363,13 @@ body {
 }
 .margin-top-20 {
     margin-top: 20px;
+}
+.home-text{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+}
+.home-text-left {
+    margin-right: 20px;
 }

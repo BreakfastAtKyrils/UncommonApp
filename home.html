@@ -1,55 +1,115 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styles/header.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body class="home-body bground-light-green">
-    <header>
-        <div class="uncommon-logo">
-            <img src="images/uncommon-logo.svg" alt="Uncommon Logo">
-        </div>
-        <div class="nav-bar">
-            <a  class="current-page" href="home.html">Home</a>
-            <a href="google.com">How we work</a>    
-            <a href="google.com">Results</a>
-            <a  href="services.html">Services</a>
-            <a href="google.com">About us</a>
-            <a   href="contact.html">Contact</a>
-        </div>
-    </header>
-    <div class="home-section bground-green margin-top-40">
+<body class="home-body bground-white">
+   <header>
+      <div class="uncommon-logo">
+         <img src="images/uncommon-logo.svg" alt="Uncommon Logo">
+      </div>
+      <div class="nav-bar">
+         <a  class="current-page" href="home.html">Home</a>
+         <a href="google.com">How we work</a>    
+         <a href="google.com">Results</a>
+         <a  href="services.html">Services</a>
+         <a href="google.com">About us</a>
+         <a   href="contact.html">Contact</a>
+      </div>
+   </header>
+    <div class="home-section bground-green">
         <div class="home-text-section">
-            <div class="home-title text-white font-40">
-                Why Uncommon App?
-            </div>
-            <div class="home-text text-white font-20 padding-top-20">
-                We empower students and their families to confidently navigate the admissions process by forming trusting partnerships, emphasizing self-awareness, and optimizing individual strengths. We don't just take an intensely personalized approach to college admissions—we prioritize our students' happiness and sense of belonging.
-            </div>
+        <div class="home-title text-white font-40">
+            Why Uncommon App?
         </div>
-        <div class="home-image-section">
-            <img src="images/diplomas.jpg" alt="Uncommon Logo">
+        <div class="home-text text-white font-20 padding-top-20">
+            <div class="home-text-left"> 
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore exercitationem commodi rerum minima repudiandae pariatur voluptates perspiciatis libero ex, laboriosam facere quas eum, earum, culpa sed cumque quibusdam fugit eligendi!
+                </div>           
+            </div>
+            <div class="home-text-right"> 
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus similique eum, cupiditate ratione assumenda, omnis molestiae adipisci excepturi, illo eos sed! Nemo totam dolore sit fuga aperiam voluptate! Qui, error?
+                </div>
+        </div>
         </div>
     </div>
-    <script>
-                // Function to handle navigation
-                function navigateToPage(event) {
-            const target = event.target;
-            if (target.tagName.toLowerCase() === 'a') {
-                const url = target.getAttribute('data-url');
-                if (url) {
-                    window.location.href = url;
-                }
-            }
-        }
+    </div>
+    <div class="home-section bground-white">
+        <div class="home-text-section">
+        <div class="home-title text-green font-40">
+            Our services
+        </div>
+        <div class="home-text text-green font-20 padding-top-20">
+            <div class="home-text-left"> 
+                <div>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. In velit nihil aspernatur quia sit itaque eius magnam! Sequi, sunt? Unde ratione, officiis temporibus commodi quia cupiditate dolore id perspiciatis saepe?
+                    <br><br>
+                </div>           
 
-        // Add event listeners to all the navigation links
-        document.addEventListener('DOMContentLoaded', () => {
-            const navLinks = document.querySelectorAll('.nav-bar a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', navigateToPage);
-            });
-        });
-    </script>
+            </div>
+            <div class="home-text-right"> 
+                <div>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla ipsam optio deleniti, rem ratione ex! Culpa debitis sint a atque! Dolorum culpa minus, harum temporibus rerum doloribus possimus modi est.
+                </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="home-section bground-green">
+        <div class="home-text-section">
+        <div class="home-title text-white font-40">
+            Our results
+        </div>
+        <div class="home-text text-white font-20 padding-top-20">
+            <div class="home-text-left"> 
+                <div>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. In velit nihil aspernatur quia sit itaque eius magnam! Sequi, sunt? Unde ratione, officiis temporibus commodi quia cupiditate dolore id perspiciatis saepe?
+                    <br><br>
+                </div>           
+
+            </div>
+            <div class="home-text-right"> 
+                <div>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla ipsam optio deleniti, rem ratione ex! Culpa debitis sint a atque! Dolorum culpa minus, harum temporibus rerum doloribus possimus modi est.
+                </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+   <script>
+      // Function to handle navigation
+      function navigateToPage(event) {
+      const target = event.target;
+      if (target.tagName.toLowerCase() === 'a') {
+      const url = target.getAttribute('data-url');
+      if (url) {
+          window.location.href = url;
+      }
+      }
+      }
+      
+      // Add event listeners to all the navigation links
+      document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('.nav-bar a');
+      navLinks.forEach(link => {
+      link.addEventListener('click', navigateToPage);
+      });
+      });
+   </script>
 </body>
