@@ -341,6 +341,11 @@ body {
 }
 .home-section {
     display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+    padding-top: 40px;
 }
 .home-image-section {
     height: 450px;
@@ -372,4 +377,56 @@ body {
 }
 .home-text-left {
     margin-right: 20px;
+}
+.font-raleway {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+}
+.justify-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Aligns all children to the right */
+    align-items: end; /* Vertically centers the items, if desired */
+    text-align: right; /* Ensures text is aligned to the right */
+}
+.home-page-read-more-button {
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    margin-top: 20px;
+    align-self: center;
+    font-weight: 700;
+    font-size: 25px;
+}
+.home-section-contact-us {
+    height: 300px;
+    background-image: url('/Users/kyril.remillard/Cleo /Elena Polenova Website/images/firefly.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-page-contact-us-button {
+    font-size: 50px;
+    width: 500px;
+    height: 150px;
+    border-radius: 45px;
+}
+.banner-image {
+    width: 100%;
+    height: 300px;
+    /* background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;  */
+    overflow: hidden; /* Hides the overflow of the image */
+    position: relative;
+
+}
+.banner-image > img {
+    width: 100%;
+    /* height: 100%; */
+    height: auto;
+    position: absolute;
+    top: 50%;  /* Centers along the vertical axis */
+    left: 50%; /* Centers along the horizontal axis */
+    transform: translate(-50%, -50%);
 }
