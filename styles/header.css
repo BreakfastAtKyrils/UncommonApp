@@ -441,9 +441,6 @@ body {
     background-repeat: no-repeat;
     height: auto;
 }
-.home-body {
-    background-color: #D7E0CA;
-}
 
 .contact-text-description {
     padding: 30px;
@@ -471,7 +468,7 @@ body {
     padding-left: 50px;
     background-color: #ffffff; /* Background color for the nav-bar */
     padding: 10px 0; /* Padding for top and bottom */
-    height: 95px;
+    /* height: 95px; */
     width: 100%;
     font-size: 24px;
     font-family: 'Raleway', sans-serif;
@@ -532,4 +529,60 @@ body {
     top: 0;               /* Aligns video to the top */
     left: 0;              /* Aligns video to the left */
     /* filter: grayscale(100%); */
+}
+
+/* RESULTS-SCHOOLS */
+.results-column-container {
+    display: flex;
+    /* grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;  */
+    justify-content: space-around;
+    /* align-content: center; */
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 200px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.result-column {
+    display: flex;
+    flex-direction: column;
+}
+.result-column a {
+    color: black; 
+    text-decoration: none; 
+    padding: 10px 20px; 
+    font-size: 24px;
+}
+
+.bground-blue {
+    background-color: #62a2be;
+}
+
+/* scrolling school icons */
+.icon-container {
+    display: flex;
+    overflow-x: hidden; /* Hide scrollbar */
+    width: 75%;
+    margin: 0 auto;
+    /* border: 1px solid #ddd; */
+    padding: 10px 0;
+}
+
+.icon {
+    flex: 0 0 calc(100% / 3); /* Show 3 icons at a time */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.icon img {
+    max-width: 100%; /* Make sure icons fit within the icon div */
+    max-height: 800px; /* Adjust icon size */
+}
+
+/* Duplicate icons for seamless scroll */
+.duplicate {
+    display: none; /* Initially hidden */
 }
