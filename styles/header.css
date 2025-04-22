@@ -508,7 +508,28 @@ body {
     z-index: 1;
   }
 
-  .dropbtn:hover > .dropdown-content {
+  .dropbtn:hover .dropdown-content {
     display: flex;
     flex-direction: column;
   }
+
+
+
+  /* Video CSS */
+  .video-container {
+    width: 100%;          /* Full width of the viewport */
+    height: 300px;        /* Fixed height for the video */
+    overflow: hidden;     /* Ensures any overflow is hidden */
+    position: relative;   /* Enables absolute positioning inside it */
+}
+
+.non-interactive-video {
+    width: 100%;          /* Full width within the container */
+    height: 100%;         /* Full height within the container */
+    object-fit: cover;    /* Ensures the video covers the container while cropping */
+    pointer-events: none; /* Disables user interaction */
+    position: absolute;   /* Positions video within the container */
+    top: 0;               /* Aligns video to the top */
+    left: 0;              /* Aligns video to the left */
+    /* filter: grayscale(100%); */
+}
