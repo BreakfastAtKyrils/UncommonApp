@@ -141,7 +141,9 @@ body {
 .font-20 {
     font-size: 20px;
 }
-
+.font-60 {
+    font-size: 60px;
+}
 .bground-white {
     background-color: white;
 }
@@ -303,11 +305,11 @@ body {
     justify-content: center;
 }
 
-* {
+/* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+} */
 
 
 #viewportCanvas {
@@ -331,11 +333,26 @@ body {
     padding-top: 20px;
 }
 .home-text-section {
-    /* width: 40%; */
     padding-left: 40px;
     padding-top: 20px;
     padding-bottom: 40px;
     padding-right: 40px;
+}
+.home-section-text-section-main-text {
+    padding-left: 40px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+}
+.home-section-text-section {
+    padding-left: 40px;
+    /* padding-top: 10px; */
+    padding-bottom: 40px;
+    padding-right: 40px;
+}
+.home-section-title {
+    padding-right: 40px;
+    padding-left: 40px;
 }
 .margin-top-40 {
     margin-top: 40px;
@@ -343,12 +360,10 @@ body {
 .home-section {
     display: flex;
     flex-direction: column;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
     padding-bottom: 20px;
     padding-top: 40px;
-    margin-right: 200px;
-    margin-left: 200px;
 }
 .home-image-section {
     height: 450px;
@@ -383,7 +398,7 @@ body {
 }
 .font-raleway {
     font-family: 'Raleway', sans-serif;
-    font-weight: 100;
+    font-weight: 300;
 }
 .justify-right {
     display: flex;
@@ -391,6 +406,14 @@ body {
     justify-content: flex-end; /* Aligns all children to the right */
     align-items: end; /* Vertically centers the items, if desired */
     text-align: right; /* Ensures text is aligned to the right */
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aligns all children to the right */
+    align-items: center; /* Vertically centers the items, if desired */
+    text-align: center; /* Ensures text is aligned to the right */
 }
 .home-page-read-more-button {
     width: 200px;
