@@ -7,15 +7,14 @@
         fill: none;
         stroke: #263f3c;
         stroke-miterlimit: 10;
-        stroke-width: .5px;
       }
     </style>
   </defs>
-  <ellipse class="st0" cx="69.44" cy="89.24" rx="47.49" ry="47.82"/>
-  <ellipse class="st0" cx="69.44" cy="89.24" rx="28.49" ry="28.69"/>
-  <ellipse class="st0" cx="69.44" cy="89.24" rx="8.55" ry="8.61"/>
-  <line class="st0" x1="69.44" y1="89.24" x2="134.51" y2="24.91"/>
-  <polyline class="st0" points="117.72 22.54 123.08 35.96 137.95 37.88"/>
-  <polyline class="st0" points="111.03 24.91 117.73 41.69 136.32 44.09"/>
-  <polyline class="st0" points="125.14 22.05 127.84 31.52 136.79 31.52"/>
+  <ellipse class="st0" cx="69.4" cy="89.2" rx="47.5" ry="47.8"/>
+  <ellipse class="st0" cx="69.4" cy="89.2" rx="28.5" ry="28.7"/>
+  <ellipse class="st0" cx="69.4" cy="89.2" rx="8.6" ry="8.6"/>
+  <line class="st0" x1="69.4" y1="89.2" x2="134.5" y2="24.9"/>
+  <polyline class="st0" points="117.7 22.5 123.1 36 137.9 37.9"/>
+  <polyline class="st0" points="111 24.9 117.7 41.7 136.3 44.1"/>
+  <polyline class="st0" points="125.1 22 127.8 31.5 136.8 31.5"/>
 </svg>
