@@ -530,6 +530,7 @@ body {
   .dropbtn:hover .dropdown-content {
     display: flex;
     flex-direction: column;
+    padding-top: 10px;
   }
 
 
