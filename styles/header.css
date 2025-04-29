@@ -428,13 +428,7 @@ body {
     font-weight: 700;
     font-size: 25px;
 }
-.home-section-contact-us {
-    height: 300px;
-    background-image: url('/Users/kyril.remillard/Cleo /Elena Polenova Website/images/firefly.jpg');
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 .home-page-contact-us-button {
     font-size: 40px;
     width: 400px;
@@ -483,41 +477,9 @@ body {
 }
 
 
-/* Footer CSS */
-.footer-template {
-    display: grid;
-    grid-template-rows: 60px 60px 60px;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    padding-top: 40px;
-    max-width: 1400px;
-    margin: auto;
-    margin-top: 100px;
-    margin-bottom: 40px;
-}
-
-.footer-template > a {
-    color: black; 
-    text-decoration: none; 
-    font-size: 24px;
-    font-weight: 100;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-} 
-
-.footer-template > a:hover {
-    font-weight: 300;
-}
-
-.footer-template > img {
-    grid-column: 3 /4;
-    grid-row: 2 / 4;
-}
 
 
-
-/* Header CSS for Dropdown */
+/* Header CSS for Dropdown
   .dropdown-content {
     display: none;
     position: absolute;
@@ -531,7 +493,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 10px;
-  }
+  } */
 
 
 
@@ -718,4 +680,31 @@ body {
         width: 100%;
         justify-self: center;
     }
+}
+
+
+/* CONTACT PAGE CSS::Mobile*/
+.main-section {
+    background-image: url('/Users/kyril.remillard/Cleo /Elena Polenova Website/images/firefly.jpg');
+}
+.contact-body .main-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 100%;
+}
+.contact-main-section-title {
+    margin: 30px;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+}
+.contact-main-section-description {
+    margin: 30px;
+    padding: 40px;
+    border-radius: 25px;
+}
+.contact-main-section-form iframe{
+    width: 100%;
+    height: 80vh;
+    border: none;
 }
