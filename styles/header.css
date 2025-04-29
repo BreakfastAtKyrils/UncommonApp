@@ -620,12 +620,11 @@ body {
     margin-top: 60px;
 }
 .single-testimonial {
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
     font-style: normal;
-    margin-left: 40px;
-    margin-right: 40px;
+    padding: 40px;
     border-top: solid white 1px;
     line-height: 36px;
 }
@@ -642,4 +641,81 @@ body {
     margin-left: 20px;
     font-weight: 100;
     font-style: italic;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .testimonials-container {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+    .single-testimonial {
+        font-size: 24px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        padding: 30px;
+        border-top: solid white 1px;
+        line-height: 36px;
+    }
+    .testimonials-container > .testimonial-section:first-child > .single-testimonial:first-child {
+        border-top: none;
+    }
+    .testimonial-text {
+       padding: 30px;
+    }
+    .testimonial-attribution {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        margin-left: 20px;
+        font-weight: 100;
+        font-style: italic;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .testimonials-container {
+        margin-bottom: 60px;
+        margin-top: 60px;
+    }
+    .testimonial-section {
+        display: flex;
+    }
+    .single-testimonial {
+        width: 40%;
+        font-size: 24px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        padding: 0px;
+        border-top: solid white 1px;
+        line-height: 36px;
+        margin: 0px;
+    }
+    .testimonial-section:last-child > .single-testimonial:last-child {
+        width: 100%;
+    }
+    .testimonials-container > .testimonial-section:first-child > .single-testimonial:first-child {
+        border-top: solid white 1px;
+    }
+    .testimonial-text {
+       padding: none;
+    }
+    .testimonial-attribution {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        margin-left: 20px;
+        font-weight: 100;
+        font-style: italic;
+    }
+    .single-testimonial > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .single-testimonial > div > img{
+        width: 100%;
+        justify-self: center;
+    }
 }
