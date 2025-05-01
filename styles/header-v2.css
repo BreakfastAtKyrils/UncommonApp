@@ -41,7 +41,8 @@ body {
 }
 #nav-bar {
     /* display: flex; */
-    display: none;
+    /* display: none; */
+    right: -100%;
     flex-direction: column;
     position: fixed;
     top: 50px;
@@ -52,10 +53,11 @@ body {
     width: 100%;
     height: 100%; 
     z-index: 100;
+    transition: 0.5s ease-out;
 }
 #nav-bar a:hover {
     font-weight: 300; 
-  }
+}
 .nav-item.desktop {
     display: none;
 }
@@ -71,7 +73,7 @@ body {
 
 @media only screen and (min-width: 990px) {
     .uncommon-logo {
-        height: 60px; /* desktop height: 60px */
+        height: 120px; /* desktop height: 60px */
         /* border: red solid; */
         position: static;
         background-color: #D7E0CA;
@@ -92,13 +94,14 @@ body {
         height: 60px; 
         font-size: 24px;
         z-index: 0;
+        margin-bottom: 10px;
     }
     .nav-item.desktop {
         display: block;
     }
     .nav-item {
         text-decoration: none;
-        margin-top: 20px;
+        /* margin-top: 20px; */
         padding-left: none;
         padding-right: none;
         display: flex;
@@ -113,6 +116,7 @@ body {
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
+        padding-bottom: 10px;
       }
     
       .dropbtn:hover .dropdown-content {

@@ -2,19 +2,19 @@
     /* width: 480px;
     padding-left: 40px; */
 }
-.nav-bar {
+/* .nav-bar {
     display: flex;
-    justify-content: space-evenly; /* Distributes all elements equally including the sides */
+    justify-content: space-evenly; 
     align-items: center;
-    background-color: #ffffff; /* Background color for the nav-bar */
-    padding: 10px 0; /* Padding for top and bottom */
+    background-color: #ffffff; 
+    padding: 10px 0; 
     height: 95px;
     width: 100%;
     font-size: 24px;
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
     font-style: normal;
-}
+} */
 .body {
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
