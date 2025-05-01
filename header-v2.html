@@ -1,0 +1,77 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header-v2.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="uncommon-logo">
+           <img src="images/uncommon-logo.svg" alt="Uncommon Logo">
+        </div>
+        <img id="hamburger-icon" src="/Users/kyril.remillard/Cleo /Elena Polenova Website/images/loupe-icon.svg">
+        <div id="nav-bar">
+          <a class="nav-item current-page" href="file:///Users/kyril.remillard/Cleo%20/Elena%20Polenova%20Website/contact.home">Home
+            <div class="mobile right-chevron-nav">></div>
+          </a>
+          <a class="nav-item" href="google.com">How we work
+            <div class="mobile right-chevron-nav">></div>
+          </a>  
+          <div class="nav-item desktop dropbtn"> Results 
+              <div class="dropdown-content">
+                  <a class="nav-item desktop" href="#">Testimonials</a>
+                  <a class="nav-item desktop" href="#">Schools</a>
+                </div>
+                <div class="mobile right-chevron-nav">></div>
+              </div>  
+        <a class="nav-item mobile" href="google.com"> Schools 
+            <div class="mobile right-chevron-nav">></div>
+        </a>
+        <a class="nav-item mobile" href="google.com"> Testimonials 
+            <div class="mobile right-chevron-nav">></div>
+        </a>
+          <a class="nav-item" href="file:///Users/kyril.remillard/Cleo%20/Elena%20Polenova%20Website/services.html">Services
+            <div class="mobile right-chevron-nav">></div>
+          </a>
+          <a class="nav-item" href="google.com">About us
+            <div class="mobile right-chevron-nav">></div>
+          </a>
+          <a  class="nav-item" href="file:///Users/kyril.remillard/Cleo%20/Elena%20Polenova%20Website/contact.html">Contact
+            <div class="mobile right-chevron-nav">></div>
+          </a>
+        </div>
+        <div class="video-container">
+            <video class="non-interactive-video" autoplay muted playsinline loop>
+                <source src="/Users/kyril.remillard/Cleo /Elena Polenova Website/images/videoplayback.mp4"
+        
+                Your browser does not support the video tag.>
+            </video>
+          </div>
+     </header>
+    <div class="template-body" style="height:3000px; background-color: yellow;"></div>
+
+
+
+
+
+
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    console.log(hamburgerIcon)
+    const navBar = document.getElementById('nav-bar');
+
+    hamburgerIcon.addEventListener('click', function() {
+        console.log('hamburger clicked')
+        if (navBar.style.display === 'none' || navBar.style.display === '') {
+            navBar.style.display = 'flex';
+        } else {
+            navBar.style.display = 'none';
+        }
+    });
+});
+</script>

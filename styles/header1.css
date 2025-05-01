@@ -14,9 +14,7 @@
     padding-top: 10px;
   }
 
-  .nav-bar {
-    position: fixed;
-    top: 0; 
+  #nav-bar {
     display: flex;
     justify-content: space-evenly; 
     align-items: center;
@@ -28,4 +26,149 @@
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
     font-style: normal;
+}
+.body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#nav-bar a {
+  color: black; 
+  text-decoration: none; 
+  padding: 10px 20px; 
+  font-size: 24px;
+}
+
+#nav-bar a:hover {
+  font-weight: 300; 
+}
+
+#nav-bar .current-page {
+  font-weight: 500; 
+}
+
+.uncommon-logo {
+  background-color: #D7E0CA;
+}
+
+.uncommon-logo img {
+  width: 480px;
+  padding-left: 40px;
+}
+
+.video-container {
+  width: 100%;         
+  height: 300px;       
+  overflow: hidden;    
+  position: relative;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.non-interactive-video {
+  width: 100%;         
+  height: 100%;         
+  object-fit: cover;    
+  pointer-events: none; 
+  position: absolute;  
+  top: 0;              
+  left: 0;              
+}
+.mobile-school-nav {
+  display: none;
+}
+#hambuger-icon {
+  display: none;
+}
+@media only screen and (min-width: 413px) and (max-width: 1024px) {
+  body {
+    margin: 0;             /* Removes default margin */
+    padding: 0;            /* Removes default padding */
+    overflow-x: hidden;    /* Prevents horizontal overflow */
+    width: 100vw; 
+  }
+  #nav-bar {
+    /* display: flex;
+    justify-content: space-evenly; 
+    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    justify-items: center; 
+    background-color: #ffffff; 
+    padding: 10px 0; 
+    height: 65px;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  #nav-bar a {
+    font-size: 20px;
+  }
+  .dropbtn {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 412px) {
+  body {
+    margin: 0;             /* Removes default margin */
+    padding: 0;            /* Removes default padding */
+    overflow-x: hidden;    /* Prevents horizontal overflow */
+    width: 100vw; 
+  }
+  .uncommon-logo {
+    position: fixed;
+    top: 0; 
+  }
+  .uncommon-logo img {
+    width: 100%;
+    height: 80px;
+    padding-left: 1px;
+  }
+  #nav-bar {
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    position: fixed;
+    top: 80; 
+    background-color: yellow;
+  }
+  #nav-bar a {
+    font-size: 16px; 
+    background-color: #ffffff;
+    min-width: 115px;
+    max-width: 25%;
+  }
+  .dropbtn {
+    display: none;
+  }
+  .mobile-school#nav {
+    display: flex;
+  }
+  .video-container {
+    display: none;
+    position: fixed;
+    top: 160px;
+  }
+  body {
+    background-color: yellow;
+  }
+  #hambuger-icon {
+    display: flex;
+    position: fixed;
+    top: 50;
+    left: 0;
+    width: 30px;
+    z-index: 1;
+    background-color: red;
+  }
 }
