@@ -5,10 +5,11 @@ body {
 
 .uncommon-logo {
     height: 50px; /* desktop height: 60px */
-    border: red solid;
+    /* border: red solid; */
     position: fixed;
     background-color: #D7E0CA;
     width: 100%;
+    z-index: 1;
 }
 .uncommon-logo > img {
     height: 100%;
@@ -52,6 +53,9 @@ body {
     height: 100%; 
     z-index: 100;
 }
+#nav-bar a:hover {
+    font-weight: 300; 
+  }
 .nav-item.desktop {
     display: none;
 }
@@ -68,41 +72,80 @@ body {
 @media only screen and (min-width: 990px) {
     .uncommon-logo {
         height: 60px; /* desktop height: 60px */
-        border: red solid;
-        position: fixed;
+        /* border: red solid; */
+        position: static;
         background-color: #D7E0CA;
         width: 100%;
     }
-
     #nav-bar {
         display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 60px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: center;
+        position: static;
+        top: auto;
         font-family: 'Raleway', sans-serif;
         font-weight: 100;
         font-style: normal;
         background-color: white;
         width: 100%;
-        height: 100%; 
+        height: 60px; 
+        font-size: 24px;
+        z-index: 0;
     }
     .nav-item.desktop {
         display: block;
     }
-
     .nav-item {
         text-decoration: none;
         margin-top: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: none;
+        padding-right: none;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        color: black;
+        /* flex-direction: row; */
+        /* justify-content: space-between; */
     }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+    
+      .dropbtn:hover .dropdown-content {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        font-weight: 300;
+      }
+      .dropbtn:hover {
+        font-weight: 300;
+      }
     .mobile {
         display: none !important;
     }
     #hamburger-icon {
         display: none !important;
      }
+     .video-container {
+        width: 100%;         
+        height: 200px;       
+        overflow: hidden;    
+        position: relative;   
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .non-interactive-video {
+        width: 100%;         
+        height: 100%;         
+        object-fit: cover;    
+        pointer-events: none; 
+        position: statis;  
+        top: auto;              
+        left: auto;  
+    }
 }
