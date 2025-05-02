@@ -11,7 +11,7 @@ body {
     align-self: start;
 }
 .footer {
-    margin-top: 100px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
 }
@@ -30,6 +30,14 @@ body {
 }
 .desktop {
     display: none;
+}
+.footer-image-container {
+    width: 100%;
+    height: 150px;
+}
+.footer-image-container > img {
+    width: 100%;
+    height: 100%;
 }
 
 @media only screen and (min-width: 990px) {
@@ -60,6 +68,14 @@ body {
         padding-left: 30px;
         padding-top: 15px;
     } 
+    .footer-image-container {
+        width: 100%;
+        height: 200px;
+    }
+    .footer-image-container > img {
+        width: 100%;
+        height: 100%;
+    }
 }
 @media only screen and (min-width: 1400px) {
     .footer > a {
@@ -77,5 +93,13 @@ body {
         padding-top: 40px;
         margin-right: auto;
         margin-left: auto;
+    }
+    .footer-image-container {
+        width: 100%;
+        height: 300px;
+    }
+    .footer-image-container > img {
+        width: 100%;
+        height: 100%;
     }
 }
