@@ -1,0 +1,167 @@
+/* RESULTS-SCHOOLS */
+.page-content {
+    position: relative;
+    top: 50px;
+}
+.results-column-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    /* grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;  */
+    /* justify-content: space-around; */
+    /* align-content: center; */
+    padding-top: 40px;
+    padding-left: 15%;
+    /* padding-bottom: 40px; */
+    /* margin-bottom: 200px; */
+    /* padding-left: 200px; */
+    /* padding-right: 200px; */
+}
+
+.result-column {
+    display: flex;
+    flex-direction: column;
+}
+.result-column a {
+    color: black; 
+    text-decoration: none; 
+    padding: 10px 20px; 
+    font-size: 16px;
+}
+
+.bground-blue {
+    background-color: #62a2be;
+}
+
+/* scrolling school icons */
+.icon-container {
+    display: flex;
+    overflow-x: hidden; /* Hide scrollbar */
+    /* width: 75%; */
+    margin: 0 auto;
+    /* border: 1px solid #ddd; */
+    padding: 10px 0;
+    /* max-height: 180px; */
+    max-width: 1200px;
+}
+
+.icon {
+    flex: 0 0 calc(100% / 3); /* Show 3 icons at a time */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.icon img {
+    max-width: 100%; /* Make sure icons fit within the icon div */
+    max-height: 180px;
+}
+
+/* Duplicate icons for seamless scroll */
+.duplicate {
+    display: none; /* Initially hidden */
+}
+
+.call-out-section {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.call-out {
+    width: 100%;
+    height: 100%;
+    background-color: #62a2be;
+    color: white;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (min-width: 780px) and (max-width: 891px) {
+    .call-out-section {
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .call-out {
+        width: 100%;
+        height: 100%;
+        background-color: #62a2be;
+        color: white;
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .result-column a {
+        color: black; 
+        text-decoration: none; 
+        padding: 10px 20px; 
+        font-size: 20px;
+    }
+
+}
+@media only screen and (min-width: 990px) {
+
+    .call-out-section {
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .call-out {
+        width: 100%;
+        height: 100%;
+        background-color: #62a2be;
+        color: white;
+        font-size: 24px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .results-column-container {
+        display: grid;
+        /* flex-direction: column;
+        align-items: start;
+        justify-content: center; */
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px; 
+        justify-content: space-around;
+        align-content: center;
+        /* padding-top: 40px; */
+        /* padding-left: 40px; */
+        padding-bottom: 40px;
+        margin-bottom: 200px;
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+    
+    .result-column {
+        display: flex;
+        flex-direction: column;
+    }
+    .result-column a {
+        color: black; 
+        text-decoration: none; 
+        padding: 10px 20px; 
+        font-size: 24px;
+    }
+}
