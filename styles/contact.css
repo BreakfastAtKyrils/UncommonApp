@@ -1,0 +1,20 @@
+#google-form-container {
+    overflow: hidden; /* Ensure content doesn't spill out */
+    background-color: aquamarine;
+}
+
+#google-form { 
+    width: 100vw; /* Make full viewport width */
+    height: calc(100vh - 20px); /* Consider height adjustments */
+    border: none;
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    #google-form {
+        transform: scale(1.2); /* Increase scale for smaller screens */
+        width: calc(100vw / 1.2); /* Compensate for scale impact on width */
+        height: calc(100vh / 1.2); /* Compensate for scale impact on height */
+    }
+}
