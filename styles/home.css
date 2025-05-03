@@ -106,9 +106,13 @@
         display: flex;
         justify-content: space-between;
     }
+
+    .home-main-image {
+        padding-left: 80px;
+    }
     .home-main-image > img {
         height: 700px;
-        padding-left: 80px;
+        box-shadow: 10px 5px white;
     }
     .home-section-text-section {
         padding-left: 40px;
