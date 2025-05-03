@@ -1,0 +1,163 @@
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aligns all children to the right */
+    align-items: center; /* Vertically centers the items, if desired */
+    text-align: center; /* Ensures text is aligned to the right */
+}
+
+.bground-green {
+    background-color: #263F3C;
+}
+.text-white {
+    color: white;
+}
+.font-40 {
+    font-size: 40px;
+}
+.font-20 {
+    font-size: 20px;
+}
+.font-60 {
+    font-size: 60px;
+}
+.bground-white {
+    background-color: white;
+}
+.bground-light-green {
+    background-color: #D7E0CA
+}
+.text-green {
+    color: #263F3C;
+}
+
+
+
+.desktop {
+    display: none;
+}
+
+/* .home-text-section {
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+} */
+
+.home-section {
+
+}
+.home-section-text-section-main-text {
+    padding-left: 40px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    font-size: 16px;
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.home-section-text-section {
+    padding-left: 40px;
+    /* padding-top: 10px; */
+    padding-bottom: 40px;
+    padding-right: 40px;
+    font-size: 16px;
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.home-section-title {
+    padding-right: 40px;
+    padding-left: 40px;
+    font-size: 30px;
+    padding-bottom: 30px;
+    padding-top: 40px;
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.home-section-main-title {
+    padding-right: 40px;
+    padding-left: 40px;
+    font-size: 30px;
+    padding-top: 40px;
+}
+.home-read-more {
+    font-style: italic;
+    text-decoration: underline; 
+    padding-top:24px;
+}
+@media only screen and (min-width: 990px) {
+    
+    .home-text-section {
+        padding-left: 40px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        padding-right: 40px;
+    }
+    .home-section-text-section-main-text {
+        padding-left: 40px;
+        padding-top: 50px;
+        padding-bottom: 40px;
+        padding-right: 40px;
+        font-size: 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .home-main-image > img {
+        height: 700px;
+        padding-left: 80px;
+    }
+    .home-section-text-section {
+        padding-left: 40px;
+        /* padding-top: 10px; */
+        padding-bottom: 40px;
+        padding-right: 40px;
+        font-size: 24px;
+
+    }
+    .home-section-title {
+        padding-right: 40px;
+        padding-left: 40px;
+        font-size: 60px;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .home-section-main-title {
+        padding-right: 40px;
+        padding-left: 40px;
+        font-size: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Aligns all children to the right */
+        align-items: center; /* Vertically centers the items, if desired */
+        text-align: center; /* Ensures text is aligned to the right */
+        padding-bottom: 30px;
+    }
+    
+    .home-section {
+        display: flex;
+        flex-direction: column;
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-bottom: 20px;
+        padding-top: 40px;
+    }
+    .home-text{
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+        padding: 10px;
+    }
+    .home-text-left {
+        margin-right: 20px;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    .desktop {
+        display: flex;
+    }
+}
