@@ -6,9 +6,10 @@ body {
     background-color: #D7E0CA;
     width: 100%;
 }
-.footer-logo {
-    height: 50px;
+.footer-logo.mobile {
+    height: 30px;
     align-self: start;
+    padding-left: 30px;
 }
 .footer {
     margin-top: 40px;
@@ -75,6 +76,11 @@ body {
     .footer-image-container > img {
         width: 100%;
         height: 100%;
+    }
+    .footer-logo.desktop {
+        height: 30px;
+        align-self: start;
+        padding-left: 30px;
     }
 }
 @media only screen and (min-width: 1400px) {
