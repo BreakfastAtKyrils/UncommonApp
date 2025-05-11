@@ -18,7 +18,7 @@
 #google-form-container {
     overflow: hidden; /* Ensure content doesn't spill out */
     /* background-color: aquamarine; */
-    border: solid orange;
+    /* border: solid orange; */
     padding-bottom: 200px;
 }
 
