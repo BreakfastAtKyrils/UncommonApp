@@ -12,15 +12,6 @@
 .text-white {
     color: white;
 }
-.font-40 {
-    font-size: 40px;
-}
-.font-20 {
-    font-size: 20px;
-}
-.font-60 {
-    font-size: 60px;
-}
 .bground-white {
     background-color: white;
 }
@@ -108,7 +99,7 @@
     }
 
     .home-main-image {
-        padding-left: 80px;s
+        padding-left: 80px;
     }
     .home-main-image > img {
         height: 700px;
@@ -160,7 +151,7 @@
         margin-right: 20px;
     }
 }
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1024px) {
     .desktop {
         display: flex;
     }
