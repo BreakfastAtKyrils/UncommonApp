@@ -3,6 +3,11 @@
     text-decoration: underline;
 }
 
+
+.logo-container {
+    background-color: #D7E0CA;
+
+}
 body {
     margin: 0;
     padding: 0;
@@ -13,12 +18,15 @@ body {
 .uncommon-logo {
     height: 50px; /* desktop height: 120px  */
     position: fixed;
-    background-color: #D7E0CA;
     width: 100%;
     z-index: 1;
     display: flex;
     align-items: center;
+    max-width: 1440px;
+    justify-self: center;
+    background-color: #D7E0CA;
 }
+
 .uncommon-logo > img {
     height: 24px;
     margin-left: 40px;
@@ -63,7 +71,10 @@ body {
     height: 100%; 
     z-index: 100;
     transition: 0.5s ease-out;
+    max-width: 1440px;
+    justify-self: center;
 }
+
 #nav-bar a:hover {
     font-weight: 300; 
 }
@@ -80,12 +91,11 @@ body {
     justify-content: space-between;
     color: white;
 }
-
-@media only screen and (min-width: 990px) {
+@media only screen and (min-width: 1024px) {
     .uncommon-logo {
         height: 120px; 
         position: static;
-        background-color: #D7E0CA;
+        /* background-color: #D7E0CA; */
         width: 100%;
     }
     .uncommon-logo > img {

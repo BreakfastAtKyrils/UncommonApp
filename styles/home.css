@@ -80,6 +80,9 @@
     text-decoration: underline; 
     padding-top:24px;
 }
+.home-section-main-title.h1 {
+    margin-bottom: 30px;
+}
 @media only screen and (min-width: 990px) {
     
     .home-text-section {
