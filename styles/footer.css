@@ -4,7 +4,7 @@ body {
 }
 .footer-container {
     background-color: #D7E0CA;
-    width: 100%;
+    /* width: 100%; */
 }
 .footer-logo.mobile {
     height: 30px;
@@ -40,7 +40,7 @@ body {
     height: 100%;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
     .mobile {
         display: none;
     }
@@ -57,6 +57,8 @@ body {
         justify-items: center;
         align-items: center;
         padding-bottom: 80px;
+        max-width: 1440px;
+        justify-self: center;
     }
     .footer > a {
         color: black; 
