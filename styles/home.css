@@ -1,3 +1,16 @@
+@media only screen and (min-width: 375px) and (max-width: 425px) {
+    .home-section-main-title.h1 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .home-section-main-title.h1 {
+        font-size: 30px;
+    }
+}
+
+
 .centered {
     display: flex;
     flex-direction: column;
@@ -36,7 +49,8 @@
 } */
 
 .home-section {
-
+    max-width: 1440px;
+    justify-self: center;
 }
 .home-section-text-section-main-text {
     padding-left: 40px;
@@ -74,6 +88,7 @@
     padding-left: 40px;
     font-size: 30px;
     padding-top: 40px;
+    margin-bottom: 20px;
 }
 .home-read-more {
     font-style: italic;
