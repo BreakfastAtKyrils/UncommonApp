@@ -1,4 +1,18 @@
 
+.bground-green {
+    background-color: #263F3C;
+}
+
+.bground-white {
+    background-color: white;
+}
+.bground-light-green {
+    background-color: #D7E0CA
+}
+.text-green {
+    color: #263F3C;
+}
+
 /* FONT SIZES */
 .h1 {
     font-size: 40px;
