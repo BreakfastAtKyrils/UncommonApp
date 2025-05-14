@@ -1,4 +1,9 @@
 /* RESULTS-SCHOOLS */
+.testimonials-width-container {
+    max-width: 1440px;
+    justify-self: center;
+}
+
 .page-content {
     position: relative;
     /* top: 50px; */
@@ -34,7 +39,8 @@
 }
 
 .testimonials-container {
-    margin: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 .single-testimonial {
     font-family: 'Raleway', sans-serif;
@@ -236,7 +242,7 @@
     .single-testimonial {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
         width: 40%;
         font-family: 'Raleway', sans-serif;
         font-weight: 200;
@@ -270,7 +276,7 @@
     .single-testimonial > div {
         display: flex;
         align-items: center;
-        justify-content: center;
+        /* justify-content: center; */
     }
     .single-testimonial > div > img{
         width: 100%;
