@@ -230,15 +230,19 @@
       const logo = document.querySelector('.uncommon-logo > img');
 
       if (window.innerWidth >= 990) {
+        logo.style.marginLeft = '0px';
         const firstNavBarItem = document.querySelector('.nav-item');
 
         const rect = firstNavBarItem.getBoundingClientRect();
         const xAxisValue = rect.left;
 
-        logo.style.marginLeft = xAxisValue + 'px';
+        const rectLogo = logo.getBoundingClientRect();
+        const logoXValue = rectLogo.left;
+
+        logo.style.marginLeft = (xAxisValue - logoXValue) + 'px';
+
       } else {
         logo.style.marginLeft = '0px';
-        logo.style.marginLeft = '40px';
       }
 
     }
