@@ -76,7 +76,17 @@
 .home-section-title {
     padding-right: 40px;
     padding-left: 40px;
-    font-size: 30px;
+    /* font-size: 30px; */
+    padding-bottom: 30px;
+    padding-top: 40px;
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.home-section-title.why-uncommon {
+    padding-right: 0px;
+    padding-left: 0px;
+    /* font-size: 30px; */
     padding-bottom: 30px;
     padding-top: 40px;
     max-width: 1500px;
