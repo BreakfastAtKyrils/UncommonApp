@@ -1,0 +1,62 @@
+.container {
+  max-width: 1200px; 
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.bground-green {
+    background-color: #263F3C;
+}
+
+.bground-white {
+    background-color: white;
+}
+.bground-light-green {
+    background-color: #D7E0CA
+}
+.text-green {
+    color: #263F3C;
+}
+
+/* FONT SIZES */
+.h1 {
+    font-size: 40px;
+}
+.h2 {
+    font-size: 30px;
+}
+.h3 {
+    font-size: 20px;
+}
+.h4 {
+    font-size: 16px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    .h1 {
+        font-size: 60px;
+    }
+    .h2 {
+        font-size: 36px;
+    }
+    .h3 {
+        font-size: 22px;
+    }
+    .h4 {
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .h1 {
+        font-size: 80px;
+    }
+    .h2 {
+        font-size: 40px;
+    }
+    .h3 {
+        font-size: 24px;
+    }
+    .h4 {
+        font-size: 20px;
+    }
+}

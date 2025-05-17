@@ -133,9 +133,7 @@ body {
 .icon-section img {
     aspect-ratio: 16/12;
 }
-.bground-green {
-    background-color: #263F3C;
-}
+
 .text-white {
     color: white;
 }
@@ -148,15 +146,7 @@ body {
 .font-60 {
     font-size: 60px;
 }
-.bground-white {
-    background-color: white;
-}
-.bground-light-green {
-    background-color: #D7E0CA
-}
-.text-green {
-    color: #263F3C;
-}
+
 .filter-white {
     filter: invert(100%) brightness(100%);
 }
