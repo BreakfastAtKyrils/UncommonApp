@@ -157,20 +157,25 @@ html, body {
   margin: 0;
 }
 
+
+.service-text-preview,
+.service-full-text {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
 @media (min-width: 1440px) {
-  .service-block {
-    
-gap: 20px;  
+  .service-icon img {
+    width: 80%;
+padding-top: 60px;
   }
 
   .service-icon {
     flex: 0 0 30%;
   }
 
-  .service-icon img {
-    width: 80%;
 
-  }
 
   .service-content {
     max-width: 65%;
@@ -187,7 +192,7 @@ gap: 20px;
   width: 70%;
   object-fit: contain;
   height: auto;
-padding-top: 40px;
+padding-top: 75px;
 }
 }
 
@@ -198,7 +203,7 @@ padding-top: 40px;
   width: 70%;
   object-fit: contain;
   height: auto;
-  padding-top: 70px;
+  padding-top: 100px;
 }
 
 .service-section {
