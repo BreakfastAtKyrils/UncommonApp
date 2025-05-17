@@ -67,6 +67,8 @@
     /* padding-bottom: 30px; */
     margin-left: 20px;
     font-weight: 100;
+    display: flex;
+    justify-content: flex-end;
 }
 
 @media only screen and (min-width: 780px) and (max-width: 891px) {
@@ -269,6 +271,8 @@
     }
     .single-testimonial.photo {
         border-top: none;
+        display: flex;
+        justify-content: center;
     }
     .testimonial-text {
        padding: none;
