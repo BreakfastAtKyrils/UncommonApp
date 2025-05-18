@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services - Uncommon App</title>
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/degree-programs.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/results-schools.css">
+
+
+
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+        <div class="uncommon-logo">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/6m860684nzlyqpxb6fqoh/uncommon-logo.svg?rlkey=302fiv5xkyb796l8z0gla1rsx&st=ziyiueef" alt="Uncommon Logo">
+         </div>
+    </div>
+  
+    <img id="hamburger-icon" src="https://www.dropbox.com/scl/fi/97dgo8bt60yydsy5ymasw/hamburger.svg?rlkey=tq9o3q13jueedpe2besi93xn6&st=93zvpbix&raw=1">
+    <div id="nav-bar">
+      <a class="nav-item h3" href="home.html">Home
+        <div class="mobile right-chevron-nav">></div>
+      </a>
+      <div class="nav-item h3 desktop dropbtn"> Our Approach 
+        <div class="dropdown-content">
+            <a class="nav-item h3 desktop" href="results-testimonials.html">Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a class="nav-item h3 desktop" href="results-schools.html">Our Comprehensive Plan</a>
+          </div>
+          <div class="mobile right-chevron-nav">></div>
+        </div> 
+        <a class="nav-item h3" href="services.html">Degree Programs
+          <div class="mobile right-chevron-nav">></div>
+        </a>
+        <div class="nav-item h3 desktop dropbtn"> Results 
+          <div class="dropdown-content">
+              <a class="nav-item h3 desktop" href="results-testimonials.html">Testimonials</a>
+              <a class="nav-item h3 desktop" href="results-schools.html">School List&nbsp;&nbsp;</a>
+            </div>
+            <div class="mobile right-chevron-nav">></div>
+          </div>  
+  
+        <a class="nav-item mobile h3" href="results-schools.html"> Services
+          <div class="mobile right-chevron-nav">></div>
+      </a>
+      <a class="nav-item mobile h3" href="results-schools.html"> Our Comprehensive Plan 
+        <div class="mobile right-chevron-nav">></div>
+    </a>
+          <a class="nav-item mobile h3" href="results-schools.html"> School List
+        <div class="mobile right-chevron-nav">></div>
+    </a>
+    <a class="nav-item mobile h3" href="results-testimonials.html"> Testimonials 
+        <div class="mobile right-chevron-nav">></div>
+    </a>
+  
+      <a class="nav-item h3" href="about.html">About Us
+        <div class="mobile right-chevron-nav">></div>
+      </a>
+      <a  class="nav-item h3" href="contact.html">Contact
+        <div class="mobile right-chevron-nav">></div>
+      </a>
+    </div>
+    <div class="video-container">
+        <video class="non-interactive-video" autoplay muted playsinline loop>
+            <source src="https://dl.dropboxusercontent.com/scl/fi/mits4j4vx33835f7hoieu/videoplayback.mp4?rlkey=36hhdv5iveu49wetf6o7bjlzd&st=e0berpqa"
+    
+            Your browser does not support the video tag.>
+        </video>
+      </div>
+  </header>
+  
+  <!-- Nouvelle section -->
+  <div class="call-out-section">
+    <div class="call-out bground-blue text-white h3">
+       Understanding our comprehensive plan
+    </div>
+</div> 
+<section class="service-section bground-white">
+  <div class="service-block container no-icon">
+    <div class="service-content">
+      <!-- <h2 class="h2 text-white">Medical School</h2> -->
+      <div class="service-text-preview" style="margin-bottom: 20px;">
+        <!-- <div class="h2" style="align-self: center; margin-bottom: 20px;">UNDERSTANDING OUR COMPREHENSIVE PLAN</div> -->
+        <p class="text-green justify h3">
+            UNCOMMON App’s signature comprehensive plan is centered by building a long-term relationship with your student. This program is most effective when activated during the student’s sophomore year of high school, in preparation for choosing consequential junior year courses. In getting to know your student as early as possible, we will also get on track for competitive summer programs relevant to their college aspirations.
+            <br><br>
+            The comprehensive plan entails an extensive commitment and promises the best results. UNCOMMON App welcomes a select amount of new students into this exclusive program annually.
+        </p>
+        <img src="https://www.dropbox.com/scl/fi/3luujkwt2bxh9womhsvta/comprehensive-plan-graphic.svg?rlkey=1r0kvri5gdui4iqhh3s0ovr0q&st=7m09zz6o&raw=1" alt="Comprehensive Plan Graphic">
+
+      </div>
+      
+
+      </div>
+
+
+    </div>
+  </div>
+</section>
+  
+
+
+
+
+
+
+  
+
+
+<script>
+document.querySelectorAll('.read-more-btn').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const fullId = this.getAttribute('data-target');
+    const previewId = this.getAttribute('data-preview');
+
+    const fullText = document.getElementById(fullId);
+    const previewText = document.getElementById(previewId);
+
+    // Affiche le texte complet
+    fullText.removeAttribute('hidden');
+    // Le résumé reste visible (pas de changement)
+    // Cacher le bouton Read more
+    this.style.display = 'none';
+
+    // Afficher le bouton Read less (dans texte complet)
+    const readLessBtn = fullText.querySelector('.read-less-btn');
+    if (readLessBtn) readLessBtn.style.display = 'flex';
+  });
+});
+
+document.querySelectorAll('.read-less-btn').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const fullId = this.getAttribute('data-target');
+    const previewId = this.getAttribute('data-preview');
+
+    const fullText = document.getElementById(fullId);
+    const previewText = document.getElementById(previewId);
+
+    // Cache le texte complet
+    fullText.setAttribute('hidden', true);
+    // Résumé visible (reste inchangé)
+    // Cacher le bouton Read less
+    this.style.display = 'none';
+
+    // Afficher le bouton Read more (dans résumé)
+    const readMoreBtn = previewText.querySelector('.read-more-btn');
+    if (readMoreBtn) readMoreBtn.style.display = 'inline-block';
+  });
+});
+
+</script>
+
+
+
+</body>
+</html>
