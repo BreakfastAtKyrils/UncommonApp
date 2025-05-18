@@ -4,33 +4,6 @@ html, body {
   height: 100%;
 }
 
-
-/*Nouvelle section*/
-
-.service-block.no-icon {
-  max-width: 1200px;
-  margin: 0 auto 40px;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  gap: 0
-
-}
-.service-block.no-icon .service-content {
-  flex: 1 1 auto; 
-  max-width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: 0;
-  margin-right: 0;
-}
-.service-block.no-icon .service-text-preview p {
-  margin-right: 0;
-  padding-right: 0;
-}
-
-/*ancien*/
-
 .force-wrap {
   display: flex;
   flex-direction: column;
