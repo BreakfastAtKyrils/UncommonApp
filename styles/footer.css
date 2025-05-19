@@ -52,7 +52,7 @@ body {
         /* margin-top: 40px; */
         padding-top: 40px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         justify-items: start;
         align-items: center;

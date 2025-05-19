@@ -92,23 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   //LOGO MARGIN CODE
-  // function updateLogoMargin() {
-  //   const logo = document.querySelector('.uncommon-logo > img');
-
-  //   if (window.innerWidth < 1024) {
-  //     logo.style.marginLeft = '0px';
-  //     logo.style.marginLeft = '40px';
-  //   }
-  //   if (window.innerWidth >= 1024 && window.innerWidth <= 1440) {
-  //     const firstNavBarItem = document.querySelector('.nav-item');
-
-  //     const rect = firstNavBarItem.getBoundingClientRect();
-  //     const xAxisValue = rect.left;
-      
-  //     logo.style.marginLeft = '0px';
-  //     logo.style.marginLeft = xAxisValue + 'px';
-  //   } 
-  // }
   function updateLogoMargin() {
   console.log('updateLogo function called')
   const logo = document.querySelector('.uncommon-logo > img');
@@ -124,17 +107,15 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('inner width is desktop')
     const firstNavBarItem = document.querySelector('.nav-item');
     
-    if (firstNavBarItem.firstChild) { // Check whether there's a text node
+    if (firstNavBarItem.firstChild) { 
       const range = document.createRange();
       range.selectNodeContents(firstNavBarItem);
-      range.setStart(firstNavBarItem.firstChild, 0); // Start at the first character
-      range.setEnd(firstNavBarItem.firstChild, 1); // End at the second character to get the first character's width
-
+      range.setStart(firstNavBarItem.firstChild, 0); 
+      range.setEnd(firstNavBarItem.firstChild, 1); 
       const rects = range.getClientRects();
       console.log('rects function')
       if (rects.length > 0) {
         const textStartX = rects[0].left;
-        // alert('the left X value for the first chaarcter is ' + rects[0].left + '       and the left x value for the logo is ' + firstNavBarItem.getBoundingClientRect().left)
 
         logo.style.marginLeft = '0px';
         logo.style.marginLeft = `${textStartX}px`;
@@ -148,10 +129,6 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 console.log('first function call')  
 updateLogoMargin()
-  
-  
   window.addEventListener('resize', updateLogoMargin);
-
-
 });
 </script>

@@ -278,6 +278,10 @@ document.querySelectorAll('.read-more-btn').forEach(btn => {
     // Afficher le bouton Read less (dans texte complet)
     const readLessBtn = fullText.querySelector('.read-less-btn');
     if (readLessBtn) readLessBtn.style.display = 'flex';
+
+    // fullText.scrollIntoView({behavior: 'smooth'})
+    // smoothScrollTo(fullText, 1000);
+
   });
 });
 
@@ -299,6 +303,10 @@ document.querySelectorAll('.read-less-btn').forEach(btn => {
     // Afficher le bouton Read more (dans résumé)
     const readMoreBtn = previewText.querySelector('.read-more-btn');
     if (readMoreBtn) readMoreBtn.style.display = 'inline-block';
+
+    // smoothScrollTo(previewText, 1000);
+    // previewText.scrollIntoView({behavior: 'smooth'})
+
   });
 });
 
@@ -358,6 +366,56 @@ document.addEventListener('DOMContentLoaded', function() {
   updateLogoMargin()
     window.addEventListener('resize', updateLogoMargin);
   });
+
+function smoothScrollTo(target, duration) {
+  const startPosition = window.pageYOffset;
+  const targetPosition = target.getBoundingClientRect().top + startPosition;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function ease(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+function smoothScrollTo(target, duration) {
+  const startPosition = window.pageYOffset;
+  const targetPosition = target.getBoundingClientRect().top + startPosition;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function ease(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
+
+  
 </script>
 
 
