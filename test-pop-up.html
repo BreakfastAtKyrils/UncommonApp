@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body.active .page {
+      filter: blur(5px);
+    }
+
+    .pop-up {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.9);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pop-up-content {
+      position: relative;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      border: 2px solid blue;
+      margin: 30px;
+      font-size: 24px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+    }
+
+    .btn {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="pop-up inactive">
+    <div class="pop-up-content">
+      <button class="close-btn">&times;</button>
+      Popup content will go here
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+
+    </div>
+  </div>
+  <div class="btn" style="color: orange;">Click here to view popup</div>
+  <div class="page content">
+    <div>Page content</div>
+    <div>Page content</div>
+    <div>Page content</div>
+    <div>Page content</div>
+    <div>Page content</div>
+    <div>Page content</div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const popUpButton = document.getElementsByClassName('btn')[0];
+      const popUp = document.getElementsByClassName('pop-up')[0];
+      const closeButton = document.getElementsByClassName('close-btn')[0];
+      const body = document.body;
+
+      popUpButton.addEventListener('click', function() {
+        popUp.style.display = 'flex'; // Shows and centers the pop-up
+        body.classList.add('active'); // Apply blur effect
+      });
+
+      closeButton.addEventListener('click', function() {
+        popUp.style.display = 'none';
+        body.classList.remove('active'); // Remove blur effect
+      });
+    });
+  </script>
+</body>
+</html>

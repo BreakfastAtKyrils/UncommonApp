@@ -12,6 +12,51 @@
 
 
 </head>
+
+<style>
+  body.active .page {
+    filter: blur(5px);
+  }
+
+  .pop-up {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pop-up-content {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid blue;
+    margin: 30px;
+    font-size: 24px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+
+  .btn {
+    cursor: pointer;
+  }
+</style>
+
 <body>
 
 <!-- Header non géré par moi -->
@@ -40,8 +85,30 @@
                   Dr. Elena Polenova is an experienced educational consultant and professional psychologist with an international, interdisciplinary background. She has completed graduate degrees from two different countries and has over two decades of experience working in a university environment
 
                 </p>
-                <a href="#" class="read-more-btn" style="font-style: italic;" data-popup="member-1">Read more</a>
+                <a href="#" class="read-more-btn person-1" style="font-style: italic;" data-popup="member-1">Read more</a>
               </div>
+
+              <!-- <div class="pop-up-content person-1" style="display: none;">
+                <button class="close-btn" style="border: 1px red;">&times;</button>
+                Popup content will go here
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+          
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+          
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+          
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+          
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+          
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+          
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+          
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+          
+              </div> -->
             </div>
         </div>
     <div class="member-wrapper">
@@ -138,60 +205,35 @@
     </div>
     </div>
   </section>
+  <div class="pop-up-container">
+    <div class="pop-up-content person-1" style="display: none;">
+      <button class="close-btn" style="border: 1px red;">&times;</button>
+      Popup content will go here
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+  
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+  
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+  
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+  
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+  
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+  
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+  
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis culpa distinctio. Quibusdam, rem itaque iure sapiente obcaecati nobis atque, laborum officia eaque aperiam eveniet id aliquam! Sapiente, nisi! Aperiam.
+  
+    </div>
 
 
-<!-- Pop up à modifier -->
+  </div>
 
-  <!-- <div class="popup" id="member-1">
- <button class="popup-close" aria-label="Close popup" onclick="this.parentElement.classList.remove('active')">X</button>
-  <h3>Nom Prénom</h3>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat..</p>
-</div> -->
-
-<!-- 
-  <div class="popup" id="member-2">
- <button class="popup-close" aria-label="Close popup" onclick="this.parentElement.classList.remove('active')">X</button>
-  <h3>Nom Prénom</h3>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat..</p>
-</div>
-
-
-  <div class="popup" id="member-3">
- <button class="popup-close" aria-label="Close popup" onclick="this.parentElement.classList.remove('active')">X</button>
-  <h3>Nom Prénom</h3>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat..</p>
-</div>
-
-
-  <div class="popup" id="member-4">
- <button class="popup-close" aria-label="Close popup" onclick="this.parentElement.classList.remove('active')">X</button>
-  <h3>Nom Prénom</h3>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat..</p>
-</div>
-
-
-  <div class="popup" id="member-5">
- <button class="popup-close" aria-label="Close popup" onclick="this.parentElement.classList.remove('active')">X</button>
-  <h3>Nom Prénom</h3>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat..</p>
-</div>
-
-
-  <div class="popup" id="member-6">
- <button class="popup-close" aria-label="Close popup" onclick="this.parentElement.classList.remove('active')">X</button>
-  <h3>Nom Prénom</h3>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat..</p>
-</div>
-
-
-  <div class="popup" id="member-7">
- <button class="popup-close" aria-label="Close popup" onclick="this.parentElement.classList.remove('active')">X</button>
-  <h3>Nom Prénom</h3>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat..</p>
-</div> -->
 
  <!-- Pop up test rapide pour le rendu tu peux le supprimer-->
-  <script>
+  <!-- <script>
   document.querySelectorAll('.read-more-btn').forEach(btn => {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
@@ -200,12 +242,56 @@
       if (popup) popup.classList.add('active');
     });
   });
-</script>
+</script> -->
 
 
 
 <!-- Footer non géré par moi -->
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const popUpButton = document.getElementsByClassName('read-more-btn')[0];
+    const popUp = document.getElementsByClassName('pop-up-content')[0];
+    const closeButton = document.getElementsByClassName('close-btn')[0];
+    const body = document.body;
+
+    popUpButton.addEventListener('click', function() {
+      // Set the display to flex to show and center the pop-up
+      popUp.style.display = 'flex';
+      
+      // Apply a high z-index to ensure the pop-up is above all other elements
+      popUp.style.zIndex = '2';
+      
+      // Center the pop-up vertically and horizontally
+      popUp.style.position = 'fixed';
+      popUp.style.top = '50%';
+      popUp.style.left = '50%';
+      popUp.style.transform = 'translate(-50%, -50%)';
+      
+      // Apply the blur effect to the background
+      // body.classList.add('active');
+      //     const elementsToBlur = document.querySelectorAll('body > *:not(.pop-up)');
+
+      //     const pageContent = document.querySelector('.page');
+      // if (pageContent) {
+      //   pageContent.style.filter = 'blur(5px)';
+      // }
+      //   });
+    const blurredSection = document.getElementsByClassName('team-section')[0];
+    blurredSection.style.filter = 'blur(5px)';
+
+    closeButton.addEventListener('click', function() {
+        popUp.style.display = 'none';
+        body.classList.remove('active'); // Remove blur effect
+        blurredSection.style.filter = '';
+      });
+    });
+  });
+</script>
+
+
+
 
 </body>
 </html>
+
