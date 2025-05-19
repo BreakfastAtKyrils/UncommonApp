@@ -27,12 +27,12 @@
       </a>
       <div class="nav-item h3 desktop dropbtn"> Our Approach 
         <div class="dropdown-content">
-            <a class="nav-item h3 desktop" href="results-testimonials.html">Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-            <a class="nav-item h3 desktop" href="results-schools.html">Our Comprehensive Plan</a>
+            <a class="nav-item h3 desktop" href="services.html">Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a class="nav-item h3 desktop" href="comprehensive-plan.html">Our Comprehensive Plan</a>
           </div>
           <div class="mobile right-chevron-nav">></div>
         </div> 
-        <a class="nav-item h3" href="services.html">Degree Programs
+        <a class="nav-item h3" href="degree-programs.html">Degree Programs
           <div class="mobile right-chevron-nav">></div>
         </a>
         <div class="nav-item h3 desktop dropbtn"> Results 
@@ -43,10 +43,10 @@
             <div class="mobile right-chevron-nav">></div>
           </div>  
   
-        <a class="nav-item mobile h3" href="results-schools.html"> Services
+        <a class="nav-item mobile h3" href="services.html"> Services
           <div class="mobile right-chevron-nav">></div>
       </a>
-      <a class="nav-item mobile h3" href="results-schools.html"> Our Comprehensive Plan 
+      <a class="nav-item mobile h3" href="comprehensive-plan.html"> Our Comprehensive Plan 
         <div class="mobile right-chevron-nav">></div>
     </a>
           <a class="nav-item mobile h3" href="results-schools.html"> School List
@@ -234,6 +234,61 @@ document.querySelectorAll('.read-less-btn').forEach(btn => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    //HAMBURGER ICON CODE
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    console.log(hamburgerIcon)
+    const navBar = document.getElementById('nav-bar');
+  
+    hamburgerIcon.addEventListener('click', function() {
+        console.log('hamburger clicked')
+        if (navBar.style.right === '-100%') {
+            navBar.style.right = '0';
+        } else {
+          navBar.style.right = '-100%';
+        }
+    });
+  
+    //LOGO MARGIN CODE
+    function updateLogoMargin() {
+    console.log('updateLogo function called')
+    const logo = document.querySelector('.uncommon-logo > img');
+    console.log(logo)
+    console.log(window.innerWidth)
+  
+    if (window.innerWidth < 1024) {
+      console.log('inner width is mobile')
+      logo.style.marginLeft = '0px';
+      logo.style.marginLeft = '40px';
+    }
+    if (window.innerWidth >= 1024 && window.innerWidth <= 1440) {
+      console.log('inner width is desktop')
+      const firstNavBarItem = document.querySelector('.nav-item');
+      
+      if (firstNavBarItem.firstChild) { 
+        const range = document.createRange();
+        range.selectNodeContents(firstNavBarItem);
+        range.setStart(firstNavBarItem.firstChild, 0); 
+        range.setEnd(firstNavBarItem.firstChild, 1); 
+        const rects = range.getClientRects();
+        console.log('rects function')
+        if (rects.length > 0) {
+          const textStartX = rects[0].left;
+  
+          logo.style.marginLeft = '0px';
+          logo.style.marginLeft = `${textStartX}px`;
+        }
+      }
+    }
+    if (window.innerWidth > 1440) {
+      logo.style.marginLeft = '0px';
+      logo.style.marginLeft = `51px`;
+    }
+  }
+  console.log('first function call')  
+  updateLogoMargin()
+    window.addEventListener('resize', updateLogoMargin);
+  });
 </script>
 
 

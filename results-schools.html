@@ -14,7 +14,57 @@
 <body>
 
 
-
+  <header>
+    <div class="logo-container">
+        <div class="uncommon-logo">
+            <img src="https://dl.dropboxusercontent.com/scl/fi/6m860684nzlyqpxb6fqoh/uncommon-logo.svg?rlkey=302fiv5xkyb796l8z0gla1rsx&st=ziyiueef" alt="Uncommon Logo">
+         </div>
+    </div>
+  
+    <img id="hamburger-icon" src="https://www.dropbox.com/scl/fi/97dgo8bt60yydsy5ymasw/hamburger.svg?rlkey=tq9o3q13jueedpe2besi93xn6&st=93zvpbix&raw=1">
+    <div id="nav-bar">
+      <a class="nav-item h3" href="home.html">Home
+        <div class="mobile right-chevron-nav">></div>
+      </a>
+      <div class="nav-item h3 desktop dropbtn"> Our Approach 
+        <div class="dropdown-content">
+            <a class="nav-item h3 desktop" href="services.html">Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a class="nav-item h3 desktop" href="comprehensive-plan.html">Our Comprehensive Plan</a>
+          </div>
+          <div class="mobile right-chevron-nav">></div>
+        </div> 
+        <a class="nav-item h3" href="degree-programs.html">Degree Programs
+          <div class="mobile right-chevron-nav">></div>
+        </a>
+        <div class="nav-item h3 desktop dropbtn"> Results 
+          <div class="dropdown-content">
+              <a class="nav-item h3 desktop" href="results-testimonials.html">Testimonials</a>
+              <a class="nav-item h3 desktop" href="results-schools.html">School List&nbsp;&nbsp;</a>
+            </div>
+            <div class="mobile right-chevron-nav">></div>
+          </div>  
+  
+        <a class="nav-item mobile h3" href="services.html"> Services
+          <div class="mobile right-chevron-nav">></div>
+      </a>
+      <a class="nav-item mobile h3" href="comprehensive-plan.html"> Our Comprehensive Plan 
+        <div class="mobile right-chevron-nav">></div>
+    </a>
+          <a class="nav-item mobile h3" href="results-schools.html"> School List
+        <div class="mobile right-chevron-nav">></div>
+    </a>
+    <a class="nav-item mobile h3" href="results-testimonials.html"> Testimonials 
+        <div class="mobile right-chevron-nav">></div>
+    </a>
+  
+      <a class="nav-item h3" href="about.html">About Us
+        <div class="mobile right-chevron-nav">></div>
+      </a>
+      <a  class="nav-item h3" href="contact.html">Contact
+        <div class="mobile right-chevron-nav">></div>
+      </a>
+    </div>
+  </header>
 
      <div class="page-content">
       <div class="icon-container" id="scrollable-icons">
@@ -168,20 +218,6 @@
 </body>
 
 <script>
-    //HAMBURGER ICON CODE
-  //   document.addEventListener('DOMContentLoaded', function() {
-  // const hamburgerIcon = document.getElementById('hamburger-icon');
-  // console.log(hamburgerIcon)
-  // const navBar = document.getElementById('nav-bar');
-
-  // hamburgerIcon.addEventListener('click', function() {
-  //     console.log('hamburger clicked')
-  //     if (navBar.style.right === '-100%') {
-  //         navBar.style.right = '0';
-  //     } else {
-  //       navBar.style.right = '-100%';
-  //     }
-  // });
 
     // SCROLLING ICONS CODE
     const container = document.getElementById('scrollable-icons');
@@ -207,49 +243,65 @@
       autoScroll();
   };
 // });
+document.addEventListener('DOMContentLoaded', function() {
+  //HAMBURGER ICON CODE
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  console.log(hamburgerIcon)
+  const navBar = document.getElementById('nav-bar');
+
+  hamburgerIcon.addEventListener('click', function() {
+      console.log('hamburger clicked')
+      if (navBar.style.right === '-100%') {
+          navBar.style.right = '0';
+      } else {
+        navBar.style.right = '-100%';
+      }
+  });
+
+  //LOGO MARGIN CODE
+  function updateLogoMargin() {
+  console.log('updateLogo function called')
+  const logo = document.querySelector('.uncommon-logo > img');
+  console.log(logo)
+  console.log(window.innerWidth)
+
+  if (window.innerWidth < 1024) {
+    console.log('inner width is mobile')
+    logo.style.marginLeft = '0px';
+    logo.style.marginLeft = '40px';
+  }
+  if (window.innerWidth >= 1024 && window.innerWidth <= 1440) {
+    console.log('inner width is desktop')
+    const firstNavBarItem = document.querySelector('.nav-item');
+    
+    if (firstNavBarItem.firstChild) { 
+      const range = document.createRange();
+      range.selectNodeContents(firstNavBarItem);
+      range.setStart(firstNavBarItem.firstChild, 0); 
+      range.setEnd(firstNavBarItem.firstChild, 1); 
+      const rects = range.getClientRects();
+      console.log('rects function')
+      if (rects.length > 0) {
+        const textStartX = rects[0].left;
+
+        logo.style.marginLeft = '0px';
+        logo.style.marginLeft = `${textStartX}px`;
+      }
+    }
+  }
+  if (window.innerWidth > 1440) {
+    logo.style.marginLeft = '0px';
+    logo.style.marginLeft = `51px`;
+  }
+}
+console.log('first function call')  
+updateLogoMargin()
+  window.addEventListener('resize', updateLogoMargin);
+});
 </script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      //HAMBURGER ICON CODE
-      const hamburgerIcon = document.getElementById('hamburger-icon');
-      console.log(hamburgerIcon)
-      const navBar = document.getElementById('nav-bar');
-  
-      hamburgerIcon.addEventListener('click', function() {
-          console.log('hamburger clicked')
-          if (navBar.style.right === '-100%') {
-              navBar.style.right = '0';
-          } else {
-            navBar.style.right = '-100%';
-          }
-      });
-  
-      //LOGO MARGIN CODE
-      function updateLogoMargin() {
-        const logo = document.querySelector('.uncommon-logo > img');
-  
-        if (window.innerWidth >= 990) {
-          const firstNavBarItem = document.querySelector('.nav-item');
-  
-          const rect = firstNavBarItem.getBoundingClientRect();
-          const xAxisValue = rect.left;
-  
-          logo.style.marginLeft = xAxisValue + 'px';
-        } else {
-          logo.style.marginLeft = '0px';
-          logo.style.marginLeft = '40px';
-        }
-  
-      }
-      
-      updateLogoMargin()
-      
-      
-      window.addEventListener('resize', updateLogoMargin);
-  
-  
-    });
+    
   </script>
 
 
