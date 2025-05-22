@@ -136,3 +136,68 @@
 
 
 }
+/* HEADER IMAGE */
+.header-image-container > img {
+    width: 100vw;
+    height: 100%;
+    
+}
+
+.header-image-container {
+    height: 150px;
+    background-image: url('https://www.dropbox.com/scl/fi/hhldhrw1536i14pmr2uu1/03-150x414.jpg?rlkey=g98yrrqgv562hvsih3uyyl5u7&st=jn8heloa&raw=1');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.header-image-tablet {
+    display: none;
+}
+.header-image-desktop {
+    display: none;
+}
+.header-image-mobile {
+    display: block;
+}
+
+@media only screen and (min-width: 414px) and (max-width: 1023px) {
+    .header-image-container {
+        height: 200px;
+        background-image: url('https://www.dropbox.com/scl/fi/dlqsgxx0h6926uzwv9hmi/03-768x200.jpg?rlkey=nvry5cxfyh968t5u8n9b2tn7x&st=bm5a1tnj&raw=1');
+        width: 100vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .header-image-tablet {
+        display: block;
+    }
+    .header-image-desktop {
+        display: none;
+    }
+    .header-image-mobile {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .header-image-container {
+        height: 300px;
+        background-image: url('https://www.dropbox.com/scl/fi/rpxf3sj7mpipxloalxksf/03-1440x300.jpg?rlkey=5vgld86pat41yjjyrp3t101hk&st=3wm6yc8k&raw=1');
+        width: 100vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* max-width: 1440px; */
+        justify-self: center;
+    }
+    .header-image-tablet {
+        display: none;
+    }
+    .header-image-desktop {
+        display: block;
+    }
+    .header-image-mobile {
+        display: none;
+    }
+}
