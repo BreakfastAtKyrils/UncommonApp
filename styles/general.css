@@ -126,3 +126,25 @@
         display: none;
     }
 }
+
+
+.call-out-section {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.call-out {
+    width: 100%;
+    height: 100%;
+    background-color: #62a2be;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
