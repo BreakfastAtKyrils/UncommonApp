@@ -134,7 +134,14 @@
     align-items: center;
     justify-content: center;
 }
-
+@media only screen and (min-width: 1024px) {
+    .call-out-section {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
 .call-out {
     width: 100%;
     height: 100%;

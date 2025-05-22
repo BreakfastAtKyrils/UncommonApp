@@ -49,6 +49,7 @@
     padding: 10px 0;
     /* max-height: 180px; */
     max-width: 1200px;
+    justify-content: center;
 }
 
 .icon {
