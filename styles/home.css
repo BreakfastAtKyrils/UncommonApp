@@ -108,7 +108,7 @@
 .home-section-main-title.h1 {
     margin-bottom: 30px;
 }
-@media only screen and (min-width: 990px) {
+/* @media only screen and (min-width: 990px) {
     
     .home-text-section {
         padding-left: 40px;
@@ -135,7 +135,6 @@
     }
     .home-section-text-section {
         padding-left: 40px;
-        /* padding-top: 10px; */
         padding-bottom: 40px;
         padding-right: 40px;
         font-size: 24px;
@@ -155,9 +154,9 @@
         font-size: 60px;
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Aligns all children to the right */
-        align-items: center; /* Vertically centers the items, if desired */
-        text-align: center; /* Ensures text is aligned to the right */
+        justify-content: center;  
+        align-items: center; 
+        text-align: center; 
         padding-bottom: 30px;
     }
     
@@ -178,10 +177,22 @@
     .home-text-left {
         margin-right: 20px;
     }
-}
+} */
 @media only screen and (min-width: 1024px) {
     .desktop {
         display: flex;
+    }
+
+    .home-section-main-title {
+        padding-right: 40px;
+        padding-left: 40px;
+        font-size: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  
+        align-items: center; 
+        text-align: center; 
+        padding-bottom: 30px;
     }
 }
 
