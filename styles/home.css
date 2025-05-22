@@ -196,7 +196,7 @@
 
 .header-image-container {
     height: 150px;
-    background-image: url('https://www.dropbox.com/scl/fi/kvqpk4jb0fwitsgmaytat/02-150x414.jpg?rlkey=rl7an6920ktkkl221yjhgjl2u&st=8jzmjlwu&raw=1');
+    background-image: url('https://www.dropbox.com/scl/fi/mzi5ir68qeqnj741pm1dy/06-150x414.jpg?rlkey=g4xkd23zl3hoefq9shpgylae3&st=4geqy11q&raw=1');
     width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
@@ -215,7 +215,7 @@
 @media only screen and (min-width: 414px) and (max-width: 1023px) {
     .header-image-container {
         height: 200px;
-        background-image: url('https://www.dropbox.com/scl/fi/i49lv2dopy8n6hmc4s1zb/02-768x200.jpg?rlkey=lk26npalke9pxmf3s6gate643&st=u7oygndu&raw=1');
+        background-image: url('https://www.dropbox.com/scl/fi/lhii3gxwsaufb54rgej5b/06-768x200.jpg?rlkey=nts3rzx7xqr8s2rh94fg9kqtz&st=dxm3t6bl&raw=1');
         width: 100vw;
         background-size: cover;
         background-repeat: no-repeat;
@@ -235,7 +235,7 @@
 @media only screen and (min-width: 1024px) {
     .header-image-container {
         height: 300px;
-        background-image: url('https://www.dropbox.com/scl/fi/y2h8ic54ak3fnn7qjw8z3/02-1440x300.jpg?rlkey=0xhxsu2houeohr6mnspxvcv97&st=knuzfrhn&raw=1');
+        background-image: url('https://www.dropbox.com/scl/fi/2s4k8h9cakv09l8wgocum/05-1440x300px.jpg?rlkey=ej1rsn30if5opvjvg3tfryrbo&st=1ssnw7fa&raw=1');
         width: 100vw;
         background-size: cover;
         background-repeat: no-repeat;
