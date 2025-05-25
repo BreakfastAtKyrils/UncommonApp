@@ -289,6 +289,13 @@
 
 
 <script>
+  function getOffset(el) {
+  const rect = el.getBoundingClientRect();
+  return {
+    left: rect.left + window.scrollX,
+    top: rect.top + window.scrollY
+  };
+}
 document.querySelectorAll('.read-more-btn').forEach(btn => {
   btn.addEventListener('click', function(e) {
     e.preventDefault();
@@ -308,8 +315,18 @@ document.querySelectorAll('.read-more-btn').forEach(btn => {
     const readLessBtn = fullText.querySelector('.read-less-btn');
     if (readLessBtn) readLessBtn.style.display = 'flex';
 
+    const titleElement = previewText.closest(".service-content")
+    const xCoord = getOffset(titleElement).left
+    const yCoord = getOffset(titleElement).top
+    console.log("y coord is: " + yCoord)
+
     // fullText.scrollIntoView({behavior: 'smooth'})
     // smoothScrollTo(fullText, 1000);
+    window.scroll({
+      top: yCoord,
+      left: xCoord, 
+      behavior: "smooth"
+  })
 
   });
 });
@@ -323,6 +340,9 @@ document.querySelectorAll('.read-less-btn').forEach(btn => {
     const fullText = document.getElementById(fullId);
     const previewText = document.getElementById(previewId);
 
+    
+    const heightElement = fullText.offsetHeight
+    console.log('height is: ' + heightElement)
     // Cache le texte complet
     fullText.setAttribute('hidden', true);
     // Résumé visible (reste inchangé)
@@ -333,8 +353,10 @@ document.querySelectorAll('.read-less-btn').forEach(btn => {
     const readMoreBtn = previewText.querySelector('.read-more-btn');
     if (readMoreBtn) readMoreBtn.style.display = 'inline-block';
 
-    // smoothScrollTo(previewText, 1000);
-    // previewText.scrollIntoView({behavior: 'smooth'})
+    window.scrollBy({
+      top: -heightElement,
+      behavior: "smooth",
+    })
 
   });
 });
