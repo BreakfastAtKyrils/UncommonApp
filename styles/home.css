@@ -53,35 +53,86 @@
     justify-self: center;
 }
 .home-section-text-section-main-text {
-    padding-left: 40px;
+    padding-left: 10px;
     padding-top: 50px;
     padding-bottom: 40px;
-    padding-right: 40px;
+    padding-right: 10px;
     font-size: 16px;
     max-width: 1500px;
     margin-right: auto;
     margin-left: auto;
 }
 
+
 .home-section-text-section {
-    padding-left: 40px;
+    padding-left: 10px;
     /* padding-top: 10px; */
     padding-bottom: 40px;
-    padding-right: 40px;
+    padding-right: 10px;
     font-size: 16px;
     max-width: 1500px;
     margin-right: auto;
     margin-left: auto;
 }
 .home-section-title {
-    padding-right: 40px;
-    padding-left: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
     /* font-size: 30px; */
     padding-bottom: 30px;
     padding-top: 40px;
     max-width: 1500px;
     margin-right: auto;
     margin-left: auto;
+}
+
+.home-section-main-title {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 30px;
+    padding-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 768px){
+    .home-section-main-title {
+        padding-right: 30px;
+        /* padding-left: 3%; */
+        /* font-size: 30px; */
+        padding-top: 40px;
+        margin-bottom: 20px;
+    }
+    .home-section-text-section-main-text {
+        padding-left: 30px;
+        padding-top: 50px;
+        padding-bottom: 40px;
+        padding-right: 30px;
+        font-size: 16px;
+        max-width: 1500px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .home-section-text-section {
+        padding-left: 30px;
+        /* padding-top: 10px; */
+        padding-bottom: 40px;
+        padding-right: 30px;
+        font-size: 16px;
+        max-width: 1500px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .home-section-title {
+        padding-right: 30px;
+        padding-left: 30px;
+        /* font-size: 30px; */
+        padding-bottom: 30px;
+        padding-top: 40px;
+        max-width: 1500px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 .home-section-title.why-uncommon {
     padding-right: 0px;
@@ -92,13 +143,6 @@
     max-width: 1500px;
     margin-right: auto;
     margin-left: auto;
-}
-.home-section-main-title {
-    padding-right: 40px;
-    padding-left: 40px;
-    font-size: 30px;
-    padding-top: 40px;
-    margin-bottom: 20px;
 }
 .home-read-more {
     font-style: italic;

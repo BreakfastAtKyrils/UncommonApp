@@ -30,7 +30,7 @@
     transition: transform 0.3s ease;
 }
 
-.call-out-section {
+/* .call-out-section {
     height: 100px;
     display: flex;
     align-items: center;
@@ -49,7 +49,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 #contact-form-description {
     font-family: 'Raleway', sans-serif;
