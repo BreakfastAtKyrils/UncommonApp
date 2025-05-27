@@ -7,6 +7,16 @@
 } */
 
 
+
+.pop-up-content {
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+  width: 80vw;
+  max-width: 1440px;
+  overflow-y: auto;
+}
+
 .team-section {
   padding: 80px 0;
   background-color: #D7E0CA;
@@ -75,7 +85,7 @@
 
 .description {
   line-height: 1.5;
-  text-align: justify;
+  text-align: left;
   flex-grow: 1;
   /* margin-right: 80px; */
   font-weight: 300;
