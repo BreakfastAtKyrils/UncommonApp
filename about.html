@@ -41,7 +41,13 @@
   .pop-up-content {
     position: relative;
     background: #fff;
-    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+
+
     border-radius: 30px;
     /* border: 4px solid #263F3C; */
     /* margin: 30px; */
@@ -245,7 +251,7 @@
     </div>
   </section>
   <div class="pop-up-container">
-    <div class="pop-up-content person-1" style="display: none;">
+    <div class="pop-up-content h3 person-1" style="display: none;">
       <button class="close-btn">&times;</button>
       <div class="h2">Dr. Elena Polenova</div>
       <br>
@@ -259,7 +265,7 @@
       <br><br>
       In Elena’s free time, she likes to read classic British mysteries while cuddling with her cats, play tennis, and swim in open water. She is obsessed with feeling the vibes of college campuses and squeezes campus tours into every vacation.
     </div>
-    <div class="pop-up-content person-2" style="display: none;">
+    <div class="pop-up-content h3 person-2" style="display: none;">
       <button class="close-btn">&times;</button>
       <div class="h2">Angela Bucalo</div>
       <br>
@@ -271,7 +277,7 @@
       <br><br>
       Angela earned a BS in sociology from Stony Brook University. After work, she enjoys hiking in the Adirondacks, traveling abroad, and learning how to drum.
     </div>
-    <div class="pop-up-content person-3" style="display: none;">
+    <div class="pop-up-content h3 person-3" style="display: none;">
       <button class="close-btn">&times;</button>
       <div class="h2">Eugenia Zhukovsky</div>
       <br>
@@ -281,7 +287,7 @@
       <br><br>
       Eugenia is a doctoral student in clinical psychology and holds a BS in neuroscience from Yale and MA in psychology from Columbia. When she isn’t working or studying, she loves playing with all kinds of animals and learning to DJ.
     </div>
-    <div class="pop-up-content person-4" style="display: none;">
+    <div class="pop-up-content h3 person-4" style="display: none;">
       <button class="close-btn">&times;</button>
       <div class="h2">Sasha Maskoff</div>
       <br>
@@ -293,7 +299,7 @@
       <br><br>
       Sasha grew up in Westport, CT. In her free time, you can find her playing chamber music, reading poetry and memoirs, or spending time in the great outdoors.
     </div>
-    <div class="pop-up-content person-5" style="display: none;">
+    <div class="pop-up-content h3 person-5" style="display: none;">
       <button class="close-btn">&times;</button>
       <div class="h2">Marina Evenstein</div>
       <br>
@@ -305,7 +311,7 @@
       <br><br>
       Marina holds a BA in computer science from NYU. In her free time, she loves all things music, including attending classical concerts in New York City, singing soprano in the Fairfield County Chorale, and volunteering with local music organizations.
     </div>
-    <div class="pop-up-content person-6" style="display: none;">
+    <div class="pop-up-content h3 person-6" style="display: none;">
       <button class="close-btn">&times;</button>
       <div class="h2">Dan Block</div>
       <br>
@@ -383,19 +389,19 @@
     
     function applyBlurExceptPopUp() {
       // Get all elements in the document
-      const elements = document.querySelectorAll('*');
+      const elementsWithoutPopUpContent = document.querySelectorAll(':not(.pop-up-content)');
       
       elements.forEach(element => {
         // Get the computed style of each element
         const style = window.getComputedStyle(element);
         
         // Check if the element has a blur filter of 5px and does not have the class 'pop-up-content'
-        if (style.filter !== 'blur(5px)' && !element.classList.contains('pop-up-content')) {
+        // if (style.filter !== 'blur(5px)' && !element.classList.contains('pop-up-content')) {
           element.style.filter = 'blur(5px)';
-        } else if (element.classList.contains('pop-up-content')) {
+        // } else if (element.classList.contains('pop-up-content')) {
           // Remove blur for elements with the class 'pop-up-content' in case of inheritance
-          element.style.filter = 'none';
-        }
+          // element.style.filter = 'none';
+        // }
     });
 
 
