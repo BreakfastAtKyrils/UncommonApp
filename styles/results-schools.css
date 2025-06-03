@@ -30,8 +30,8 @@
     flex-direction: column;
 }
 .result-column a {
-    color: black; 
-    text-decoration: none; 
+    /* color: black; */
+    /* text-decoration: none; */
     padding: 10px 20px; 
 }
 
@@ -116,8 +116,8 @@
         justify-content: center;
     }
     .result-column a {
-        color: black; 
-        text-decoration: none; 
+        /* color: black; */
+        /* text-decoration: none; */
         padding: 10px 20px; 
     }
 
@@ -172,8 +172,8 @@
         flex-direction: column;
     }
     .result-column a {
-        color: black; 
-        text-decoration: none; 
+        /* color: black; */
+        /* text-decoration: none; */
         padding: 10px 20px; 
     }
 }
