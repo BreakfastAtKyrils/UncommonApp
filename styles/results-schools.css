@@ -30,7 +30,7 @@
     flex-direction: column;
 }
 .result-column a {
-    /* color: black;  */
+    color: #263F3C;
     /* text-decoration: none; */
     padding: 10px 20px; 
 }
