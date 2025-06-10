@@ -145,7 +145,10 @@
 
 .header-image-container {
     height: 150px;
-    background-image: url('https://www.dropbox.com/scl/fi/hhldhrw1536i14pmr2uu1/03-150x414.jpg?rlkey=g98yrrqgv562hvsih3uyyl5u7&st=jn8heloa&raw=1');
+    /* background-image: url('https://www.dropbox.com/scl/fi/hhldhrw1536i14pmr2uu1/03-150x414.jpg?rlkey=g98yrrqgv562hvsih3uyyl5u7&st=jn8heloa&raw=1');
+     */
+    /* background-image: url('https://www.dropbox.com/scl/fi/mzi5ir68qeqnj741pm1dy/06-150x414.jpg?rlkey=g4xkd23zl3hoefq9shpgylae3&st=4geqy11q&raw=1'); */
+    background-image: url('https://www.dropbox.com/scl/fi/mzi5ir68qeqnj741pm1dy/06-150x414.jpg?rlkey=g4xkd23zl3hoefq9shpgylae3&st=4geqy11q&raw=1');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -163,7 +166,7 @@
 @media only screen and (min-width: 414px) and (max-width: 1023px) {
     .header-image-container {
         height: 200px;
-        background-image: url('https://www.dropbox.com/scl/fi/dlqsgxx0h6926uzwv9hmi/03-768x200.jpg?rlkey=nvry5cxfyh968t5u8n9b2tn7x&st=bm5a1tnj&raw=1');
+        background-image: url('https://www.dropbox.com/scl/fi/lhii3gxwsaufb54rgej5b/06-768x200.jpg?rlkey=nts3rzx7xqr8s2rh94fg9kqtz&st=dxm3t6bl&raw=1');
         width: 100vw;
         background-size: cover;
         background-repeat: no-repeat;
@@ -183,7 +186,8 @@
 @media only screen and (min-width: 1024px) {
     .header-image-container {
         height: 300px;
-        background-image: url('https://www.dropbox.com/scl/fi/rpxf3sj7mpipxloalxksf/03-1440x300.jpg?rlkey=5vgld86pat41yjjyrp3t101hk&st=3wm6yc8k&raw=1');
+        background-image: url('https://www.dropbox.com/scl/fi/2s4k8h9cakv09l8wgocum/05-1440x300px.jpg?rlkey=ej1rsn30if5opvjvg3tfryrbo&st=1ssnw7fa&raw=1');
+
         width: 100vw;
         background-size: cover;
         background-repeat: no-repeat;
