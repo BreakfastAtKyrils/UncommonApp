@@ -59,7 +59,7 @@
     position: absolute;
     top: 10px;
     right: 20px;
-    font-size: 20px;
+    font-size: 40px;
     cursor: pointer;
     background-color: transparent;
     border: none;
@@ -325,23 +325,6 @@
     </div>
   </div>
 
-
- <!-- Pop up test rapide pour le rendu tu peux le supprimer-->
-  <!-- <script>
-  document.querySelectorAll('.read-more-btn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const popupId = this.getAttribute('data-popup');
-      const popup = document.getElementById(popupId);
-      if (popup) popup.classList.add('active');
-    });
-  });
-</script> -->
-
-
-
-<!-- Footer non géré par moi -->
-
 <div class="footer-container">
   <div class="footer-image-container">
   </div>
@@ -373,7 +356,6 @@
       <a class="desktop" style="visibility: hidden;">Placeholder</a>
 
       <a style="visibility: hidden;">Placeholder</a>
-      <!-- <img class="footer-logo desktop" src="https://dl.dropboxusercontent.com/scl/fi/6m860684nzlyqpxb6fqoh/uncommon-logo.svg?rlkey=302fiv5xkyb796l8z0gla1rsx&st=mgqm8n5g" alt="Uncommon Logo" class="logo"> -->
   </footer>
 </div>
 <script>
@@ -381,27 +363,16 @@
     const popUpButtons = document.querySelectorAll('.read-more-btn');
     const closeButtons = document.querySelectorAll('.close-btn');
     const popUps = document.querySelectorAll('.pop-up-content');
-    // const blurredSections = document.querySelectorAll('.team-section');
-    // const body = document.body;
 
 
     
     
     function applyBlurExceptPopUp() {
-      // Get all elements in the document
-      const elementsWithoutPopUpContent = document.querySelectorAll(':not(.pop-up-content)');
-      
-      elements.forEach(element => {
-        // Get the computed style of each element
-        const style = window.getComputedStyle(element);
-        
-        // Check if the element has a blur filter of 5px and does not have the class 'pop-up-content'
-        // if (style.filter !== 'blur(5px)' && !element.classList.contains('pop-up-content')) {
-          element.style.filter = 'blur(5px)';
-        // } else if (element.classList.contains('pop-up-content')) {
-          // Remove blur for elements with the class 'pop-up-content' in case of inheritance
-          // element.style.filter = 'none';
-        // }
+      const elementsWithoutPopUpContent = document.querySelectorAll('body > *:not(.pop-up-container)');
+
+    
+    elementsWithoutPopUpContent.forEach(element => {
+        element.style.filter = 'blur(5px)';
     });
 
 
@@ -411,7 +382,6 @@
       const elements = document.querySelectorAll('*');
 
       elements.forEach(element => {
-        // Get the computed style of each element
         const style = window.getComputedStyle(element);
 
           element.style.filter = 'none';
@@ -420,9 +390,9 @@
     
     
     popUpButtons.forEach((popUpButton, index) => {
-        popUpButton.addEventListener('click', function() {
+        popUpButton.addEventListener('click', function(event) {
+            event.preventDefault();
             const popUp = popUps[index];
-            // const blurredSection = blurredSections[index];
             
             
             
@@ -439,16 +409,7 @@
             popUp.style.left = '50%';
             popUp.style.transform = 'translate(-50%, -50%)';
 
-            
-
-            
-            // blurredSection.style.filter = 'blur(5px)';
-
-            // const header = document.getElementsByClassName('header')
-            // header.style.filter = 'blur(5px)';
-            // const callOut = document.getElementsByClassName('call-out-section')[0]
-            // callOut.style.filter = 'blur(5px)';
-            // applyBlurExceptPopUp()
+            applyBlurExceptPopUp();
         });
 
         // Add event listener to the corresponding close button
@@ -459,16 +420,11 @@
             
             // Close and style reset the pop-up
             popUp.style.display = 'none';
-            // body.classList.remove('active');
-            // blurredSection.style.filter = '';
-            // const callOut = document.getElementsByClassName('call-out-section')[0]
-            // callOut.style.filter = '';
+            removeBlur()
         });
     });
 
-    // applyBlurExceptPopUp()
-    // setTimeout(20000)
-    // removeBlur()
+
     
 });
   document.addEventListener('DOMContentLoaded', function() {

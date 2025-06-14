@@ -249,14 +249,7 @@
     
 }
 
-.header-image-container {
-    height: 150px;
-    background-image: url('https://www.dropbox.com/scl/fi/mzi5ir68qeqnj741pm1dy/06-150x414.jpg?rlkey=g4xkd23zl3hoefq9shpgylae3&st=4geqy11q&raw=1');
-    width: 100vw;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+
 .header-image-tablet {
     display: none;
 }
@@ -269,12 +262,12 @@
 
 @media only screen and (min-width: 414px) and (max-width: 1023px) {
     .header-image-container {
-        height: 200px;
+        /* height: 200px;
         background-image: url('https://www.dropbox.com/scl/fi/lhii3gxwsaufb54rgej5b/06-768x200.jpg?rlkey=nts3rzx7xqr8s2rh94fg9kqtz&st=dxm3t6bl&raw=1');
         width: 100vw;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center; */
     }
     .header-image-tablet {
         display: block;
@@ -289,14 +282,14 @@
 
 @media only screen and (min-width: 1024px) {
     .header-image-container {
-        height: 300px;
+        /* height: 300px;
         background-image: url('https://www.dropbox.com/scl/fi/2s4k8h9cakv09l8wgocum/05-1440x300px.jpg?rlkey=ej1rsn30if5opvjvg3tfryrbo&st=1ssnw7fa&raw=1');
         width: 100vw;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center; */
         /* max-width: 1440px; */
-        justify-self: center;
+        /* justify-self: center; */
     }
     .header-image-tablet {
         display: none;
@@ -306,5 +299,35 @@
     }
     .header-image-mobile {
         display: none;
+    }
+}
+
+
+
+/* HEADER VIDEO CODE */
+.header-image-container {
+    height: 150px;
+}
+.header-image-container > video {
+    object-fit: contain;
+    width: 100%;
+}
+@media only screen and (min-width: 414px) and (max-width: 1023px) {
+    .header-image-container {
+
+    }
+    .header-image-container > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .header-image-container {
+    }
+    .header-image-container > video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
     }
 }
