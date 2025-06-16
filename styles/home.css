@@ -98,6 +98,7 @@
 @media only screen and (min-width: 768px){
     .home-section-main-title {
         padding-right: 30px;
+        padding-left: 30px;
         /* padding-left: 3%; */
         /* font-size: 30px; */
         padding-top: 40px;
@@ -306,28 +307,54 @@
 
 /* HEADER VIDEO CODE */
 .header-image-container {
-    height: 150px;
+    /* height: 150px; */
 }
 .header-image-container > video {
-    object-fit: contain;
+    margin-top: 50px;
+    /* margin-top: 50px; */
+    object-fit: cover;
+    object-position: top left;
     width: 100%;
+    height: 200px;
+}
+.page-content {
+    margin-top: -10px;
 }
 @media only screen and (min-width: 414px) and (max-width: 1023px) {
     .header-image-container {
 
     }
     .header-image-container > video {
+        margin-top: 50px;
         object-fit: cover;
+        object-position: top left;
+        /* object-position: -10% 0; */
         width: 100%;
-        height: 100%;
+        height: 240px;
+        /* transform: translateX(-10px); */
+    }
+
+    .page-content {
+        /* margin-top: 140px; */
     }
 }
 @media only screen and (min-width: 1024px) {
     .header-image-container {
     }
-    .header-image-container > video {
+    /* .header-image-container > video {
         object-fit: cover;
         width: 100%;
-        height: 100%;
+        height: 300px;
+    } */
+    .header-image-container > video {
+        margin-top: 0px;
+        object-fit: cover;
+        object-position: top left;
+        width: 100%;
+        height: 300px;
+    }
+
+    .page-content {
+        /* margin-top: 150px; */
     }
 }
