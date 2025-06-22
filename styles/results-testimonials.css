@@ -291,10 +291,17 @@
         /* justify-content: center; */
     }
     .single-testimonial > div > img{
-        width: 100%;
+        width: 420px;
         justify-self: center;
         height: 400px;
+        align-self: center;
     }
+    .single-testimonial > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .single-testimonial.long-testimonial {
         display: flex;
         width: 87% !important;
