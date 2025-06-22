@@ -96,7 +96,7 @@
 
             <div class="testimonial-section">
                 <div class="single-testimonial first-testimonial">
-                    <div class="testimonial-text h3">
+                    <div class="testimonial-text h3 text">
                         Elena has been extremely helpful with every aspect of my applications. She provides great guidance about what colleges are really looking for, how to make those things be reflected in your experiences, and how to make those experiences be reflected in your applications. From strategizing about where to prioritize my efforts in competitions to helping me bring out my unique voice and character traits in essays, Elena has helped me to produce an application that reflects every facet of my personality and strengths in a forceful yet nuanced manner. Meanwhile, Dan’s systematic approach to the SAT makes test preparation efficient and much less stressful. Your SAT score quickly becomes a reflection of how many simple mistakes you make (which Dan’s strategies greatly minimize), because you know how to solve every question. Working with both of them has been immensely helpful in being accepted into elite summer camps, scholarships, and colleges.
 
                     </div>
@@ -683,4 +683,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const testimonials = document.querySelectorAll('.single-testimonial');
+    
+    // Define the color pattern
+    const colorPattern = ['##4b9d25', '#62a2be', '#62a2be', '##4b9d25', 
+    '##4b9d25', '#62a2be', '#62a2be', '##4b9d25', '##4b9d25', '#62a2be', '#62a2be', '##4b9d25', '##4b9d25', '#62a2be', '#62a2be', '##4b9d25'];
+
+    testimonials.forEach((testimonial, index) => {
+        const color = colorPattern[index % colorPattern.length];
+        testimonial.style.color = color;
+    });
+});
   </script>
