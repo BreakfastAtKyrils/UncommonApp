@@ -118,3 +118,17 @@ body {
         height: 100%;
     }
 } */
+
+.asso-logo > img {
+    width: 15vw;
+    position: absolute;
+    left: 30px;
+}
+ @media only screen and (min-width: 1024px) {
+    .asso-logo > img {
+        width: 15vw;
+        position: absolute;
+        right: 40px;
+    }
+}
+
