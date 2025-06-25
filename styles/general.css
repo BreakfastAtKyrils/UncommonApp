@@ -188,3 +188,8 @@
         padding-right: 30px;
     }
 }
+
+.current-page {
+    font-weight: 500;
+    color: #263F3C;
+}

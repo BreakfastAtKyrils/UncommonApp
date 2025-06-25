@@ -6,9 +6,9 @@ body {
     margin: 0;
     padding: 0;
 }
-.current-page {
+/* .current-page {
     font-weight: 200;
-}
+} */
 .uncommon-logo {
     height: 50px; /* desktop height: 120px  */
     position: fixed;
